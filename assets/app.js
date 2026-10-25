@@ -9,7 +9,7 @@
   const MODEL = window.TaoModel;
   const VIEW = window.TaoView3D;
   const NAMES = ['大运', '流年', '流月', '流日', '流时'];
-  const OFFSET = 28800000;
+  const OFFSET = 28800000, CIVIL_SAMPLE_MS = 756000, FRAME_MS = 40, MODEL_UNITS_PER_CIVIL_DAY = 8 / 7;
   const DEFAULT_CAMERA = {azimuth: -72, elevation: 18};
   const reduced = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : {matches:false,addEventListener(){}};
   const state = {
@@ -18,7 +18,8 @@
     result: null, resultKey: null, natal: null, natalMorphology: null,
     leftMode: 'birth', zoom: 1, camera: {...DEFAULT_CAMERA},
     worker: null, activeJob: null, revision: 0, busy: false, calibrating: false,
-    playing: false, playTimer: null, playbackDelay: 4000, debounce: null, error: null, initialized: false,
+    playing: false, playTimer: null, playbackDaysPerSecond: 7, playFrame: null, lastPlayStamp: null, playCredit: 0,
+    stream: null, streamSerial: 0, debounce: null, error: null, initialized: false,
     autoRotate: !reduced.matches, rotationSpeed: 6, rotationFrame: null, lastRotationStamp: null,
     stageVisible: true, stageSeen: false, disposed: false,
     reducedMotion: reduced.matches, cache: new Map(), profiles: new Map(), presetId: null,
@@ -38,7 +39,7 @@
     const message = error && error.message ? error.message : String(error);
     state.error=message;$('error').hidden=false;setText('error',message);
     setStatus('计算已停止，请检查输入或当前设置。',0,'');
-    state.playing=false;clearTimeout(state.playTimer);state.playTimer=null;renderPlay();
+    state.playing=false;stopPlayFrame();renderPlay();
   }
   function clearError(){state.error=null;$('error').hidden=true;setText('error','');}
   function notifyIdle() {
@@ -50,13 +51,14 @@
     if(!state.worker){
       state.worker=window.TaoWorker.create();
       state.worker.onmessage=onWorkerMessage;
-      state.worker.onerror=e=>{const job=state.activeJob;if(!job)return;state.activeJob=null;state.busy=false;state.calibrating=false;reportError(e.message||'本地计算线程异常');syncControls();notifyIdle();resolveReady(false);};
+      state.worker.onerror=e=>{const job=state.activeJob;if(!job)return;state.worker?.terminate();state.worker=null;if(state.stream){state.stream.detached=true;state.stream.buffered=null;}state.activeJob=null;state.busy=false;state.calibrating=false;reportError(e.message||'本地计算线程异常');syncControls();notifyIdle();resolveReady(false);};
     }
     return state.worker;
   }
-  function cancelJob(reason, keepCalibrationState){
+  function cancelJob(reason, keepCalibrationState, preserveStream){
     state.revision++;clearTimeout(state.debounce);state.debounce=null;
-    if(state.activeJob && state.worker){state.worker.terminate();state.worker=null;}
+    if((state.activeJob || state.stream) && state.worker){state.worker.terminate();state.worker=null;}
+    if(state.stream){if(preserveStream){state.stream.detached=true;state.stream.buffered=null;}else state.stream=null;stopPlayFrame();}
     state.activeJob=null;state.busy=false;
     if(!keepCalibrationState)state.calibrating=false;
     if(reason)setStatus(reason,0,'');
@@ -85,6 +87,7 @@
   function onWorkerMessage(event){
     const data=event.data,job=state.activeJob;
     if(!job||data.id!==job.id||job.chartKey!==state.chart?.key)return;
+    if(job.type==='stream-start'||job.type==='stream-advance'){handleStreamMessage(data,job);return;}
     if(data.type==='progress'){
       const p=data.progress||{};$('computeProgress').value=p.fraction||0;
       if(Date.now()-job.lastProgress>700||p.fraction===1){job.lastProgress=Date.now();setStatus(job.type==='calibrate'?'校准中 · 同一套 756 条件比较 9 种映射':(p.phase||'轨迹积分'),p.fraction,p.total?`${p.completed} / ${p.total}`:`${Math.round((p.fraction||0)*100)}%`);}
@@ -111,6 +114,7 @@
   function applyResult(result,key){
     state.result=result;state.resultKey=key;state.natal=result.baseline;state.natalMorphology=result.morphology.birth;
     state.profile=result.profile;state.temporal=result.temporal;state.completedComputations++;
+    setText('flowBadge','五层作用');setText('continuousState','选择时刻后点击连续播放；左侧生辰核保持固定。');
     renderProfile();renderContext();renderParameters();draw();syncControls();
   }
   function submitBirth(input,presetId){
@@ -156,9 +160,9 @@
     $('profileDot').classList.toggle('ready',p.status!=='uncalibrated_preview');
     $('calibrate').textContent=p.status==='uncalibrated_preview'?'校准此生辰 · 756 条件':'重新校准 · 756 条件';
   }
-  function renderContext(){
+  function renderContext(providedTemporal){
     if(!state.chart)return;
-    const c=state.chart,t=MODEL.temporal(c,state.epochMs);state.temporal=t;
+    const c=state.chart,t=providedTemporal||MODEL.temporal(c,state.epochMs);state.temporal=t;
     $('targetTime').value=iso(state.epochMs);$('targetTime').min=iso(c.birthMs);$('targetTime').max=iso(state.nowMs);
     $('timeline').value=state.nowMs===c.birthMs?0:Math.round(10000*(state.epochMs-c.birthMs)/(state.nowMs-c.birthMs));
     $('timeline').setAttribute('aria-valuetext',labelTime(state.epochMs)+' 北京时间');
@@ -175,9 +179,10 @@
     const has=!!state.chart,cal=state.calibrating;
     ['targetTime','timeline','goNow','prevTime','nextTime','playStep','playDelay','resetLayers'].forEach(id=>$(id).disabled=!has||cal);
     $('play').disabled=!has||cal||state.reducedMotion;
-    $('calibrate').disabled=!has||state.busy||cal;
+    $('calibrate').disabled=!has||state.busy||cal||!!(state.stream&&state.playing);
     $('cancelCalibration').hidden=!cal;
     $('export').disabled=!state.result||state.resultKey!==requestKey()||cal;
+    $('leftMode').disabled=!!state.stream;
     NAMES.forEach((_,i)=>{
       const active=has&&(i!==0||state.temporal?.dayun.active);
       $('enabled'+i).checked=state.enabled[i];$('enabled'+i).disabled=!has||cal||!active;
@@ -199,9 +204,10 @@
   function renderParameters(){
     const r=state.result,c=state.chart;
     if(!c){$('parameterTable').innerHTML='<p class="field-note">生成后显示。</p>';setText('technicalState','等待计算');return;}
-    $('parameterTable').innerHTML='<table><thead><tr><th scope="col">参数</th><th scope="col">生辰核</th><th scope="col">流盘</th><th scope="col">去大运</th></tr></thead><tbody>'+MODEL.parameterOrder.map(k=>`<tr><th scope="row">${k}</th><td>${c.parameters[k].toFixed(6)}</td><td>${r?r.parameters[k].toFixed(6):'计算中'}</td><td>${r?r.noDayunParameters[k].toFixed(6):'计算中'}</td></tr>`).join('')+'</tbody></table>';
-    setText('protocolNote','生辰进入八参数，初态固定为 (0.1, 0, 0)。各时点独立预热 600、观察 90 个模型时间单位，步长 0.0025；模型时间不是公历天数。未标记简单，不等于已证明混沌。');
-    setText('technicalState',r?JSON.stringify({mappingProfile:{id:r.profile.id,status:r.profile.status,source:r.profile.source,eligibleCount:r.profile.eligibleCount},parameterDomain:{anchor:c.anchorId,originalAnchor:c.originalAnchorId,repaired:c.domainFallback},protocol:r.protocol,morphology:r.morphology},null,2):'等待当前时间与设置的计算结果。');
+    const flowing=!!r?.continuous,lastColumn=flowing?'此时输入目标':'去大运';
+    $('parameterTable').innerHTML='<table><thead><tr><th scope="col">参数</th><th scope="col">生辰核</th><th scope="col">'+(flowing?'连续状态实际值':'流盘')+'</th><th scope="col">'+lastColumn+'</th></tr></thead><tbody>'+MODEL.parameterOrder.map(k=>`<tr><th scope="row">${k}</th><td>${c.parameters[k].toFixed(6)}</td><td>${r?r.parameters[k].toFixed(6):'计算中'}</td><td>${r?(flowing?r.targetParameters?.[k]:r.noDayunParameters?.[k])?.toFixed(6)||'—':'计算中'}</td></tr>`).join('')+'</tbody></table>';
+    setText('protocolNote',flowing?'连续模式从所选起点的轨迹末点续积分；真实时间与模型时间按固定比例对应。参数以因果响应过渡，轨迹窗口逐步加入新样点；没有两张图之间的形状插值。初始窗口含冻结起点轨迹，逐渐被连续段替换。':'生辰进入八参数，初态固定为 (0.1, 0, 0)。定位时刻先独立预热 600、观察 90 个模型时间单位；点击播放后从该图末点连续积分。模型时间不是公历天数。');
+    setText('technicalState',r?JSON.stringify({mappingProfile:{id:r.profile.id,status:r.profile.status,source:r.profile.source,eligibleCount:r.profile.eligibleCount},parameterDomain:{anchor:c.anchorId,originalAnchor:c.originalAnchorId,repaired:c.domainFallback},protocol:r.protocol,continuous:state.stream?{sessionId:state.stream.id,startEpochMs:state.stream.startEpochMs,modelElapsed:state.stream.current?.modelElapsed,checkpoint:state.stream.current?.checkpoint}:undefined,morphology:flowing?{birth:state.natalMorphology,flow:'Non-autonomous trajectory; no frozen-attractor classification.'}:r.morphology},null,2):'等待当前时间与设置的计算结果。');
   }
   function drawScene(){
     const r=state.result,birthMode=state.leftMode==='birth';const left=birthMode?state.natal:r?.noDayun;
@@ -220,10 +226,10 @@
     setText('leftTitle',birthMode?'生辰核':'去大运流盘');setText('leftBadge',birthMode?'固定八参数':'仅关闭大运');
     setText('leftDetail',birthMode?'生辰参数 · 固定初态':'同时间 · 其余四层不变');
     if(left){const m=birthMode?state.natalMorphology:r?.morphology.noDayun;setText('leftMetric',morphologyText(m));}
-    if(r){setText('rightMetric',morphologyText(r.morphology.flow));setText('rightDetail',iso(state.epochMs).slice(0,16).replace('T',' '));}
+    if(r){setText('rightMetric',r.continuous?'连续驱动 · 非定常轨迹':morphologyText(r.morphology.flow));setText('rightDetail',iso(state.epochMs).slice(0,16).replace('T',' '));}
     if(state.drawStats.left.clipped)setText('leftDetail',`视野外 ${state.drawStats.left.clipped} 点 · 可缩小`);
     if(state.drawStats.right.clipped)setText('rightDetail',`视野外 ${state.drawStats.right.clipped} 点 · 可缩小`);
-    if(r){$('natalCanvas').setAttribute('aria-label',`${state.chart.pillars.join(' ')} ${birthMode?'生辰核':'去大运流盘'}，${morphologyText(birthMode?state.natalMorphology:r.morphology.noDayun)}`);$('flowCanvas').setAttribute('aria-label',`${labelTime(state.epochMs)} 的流盘，${morphologyText(r.morphology.flow)}`);}
+    if(r){$('natalCanvas').setAttribute('aria-label',`${state.chart.pillars.join(' ')} ${birthMode?'生辰核':'去大运流盘'}，${morphologyText(birthMode?state.natalMorphology:r.morphology.noDayun)}`);$('flowCanvas').setAttribute('aria-label',`${labelTime(state.epochMs)} 的流盘，${r.continuous?'连续驱动轨迹':morphologyText(r.morphology.flow)}`);}
     syncRotation();
   }
   function canRotate(){return state.autoRotate&&!!state.natal&&!state.reducedMotion&&!document.hidden&&state.stageVisible&&!state.disposed;}
@@ -274,12 +280,12 @@
     pausePlayback(false);state.enabled[i]=enabled;state.multipliers[i]=multiplier;syncControls();queueCompute(90);
   }
   function renderPlay(){
-    $('play').innerHTML=state.playing?'暂停 <span aria-hidden="true">Ⅱ</span>':'播放 <span aria-hidden="true">▷</span>';
-    $('play').setAttribute('aria-pressed',String(state.playing));$('play').title=state.reducedMotion?'系统已启用减少动态效果；请手动拖动时间轴':'逐个时点独立计算流盘';
+    $('play').innerHTML=state.playing?'暂停 <span aria-hidden="true">Ⅱ</span>':(state.stream&&!state.stream.detached?'继续演变':'连续播放')+' <span aria-hidden="true">▷</span>';
+    $('play').setAttribute('aria-pressed',String(state.playing));$('play').title=state.reducedMotion?'系统已启用减少动态效果；请手动拖动时间轴':'从当前轨迹末点连续积分，生辰核固定对照';
   }
   function pausePlayback(cancelComputation){
-    state.playing=false;clearTimeout(state.playTimer);state.playTimer=null;renderPlay();
-    if(cancelComputation&&(state.activeJob?.type==='compute'||state.debounce)){cancelJob('已暂停；当前时点尚未计算完成。');syncControls();notifyIdle();}
+    state.playing=false;stopPlayFrame();syncControls();
+    if(cancelComputation&&!state.stream&&(state.activeJob?.type==='compute'||state.debounce)){cancelJob('已暂停；当前时点尚未计算完成。');syncControls();notifyIdle();}
   }
   function nextEpoch(direction=1){
     const step=$('playStep').value,ms=state.epochMs;
@@ -289,35 +295,141 @@
     return clamp(ms+direction*(step==='hour'?2*3600000:86400000));
   }
   function stepTime(direction){if(!state.chart||state.calibrating)return;setTime(nextEpoch(direction));}
-  function setPlaybackDelay(value){
-    if(![2000,4000,8000].includes(value))return false;
-    state.playbackDelay=value;$('playDelay').value=String(value);schedulePlayback();return true;
+  function setPlaybackSpeed(value){
+    if(![1,7,30].includes(value))return false;
+    state.playbackDaysPerSecond=value;$('playDelay').value=String(value);
+    if(state.playing)setStatus(`连续演变 · 目标 ${value} 天/秒`,1,'真实续积分');
+    return true;
+  }
+  function stopPlayFrame(){
+    clearTimeout(state.playTimer);state.playTimer=null;
+    if(state.playFrame!==null)window.cancelAnimationFrame(state.playFrame);
+    state.playFrame=null;state.lastPlayStamp=null;state.playCredit=0;
+  }
+  function canPlay(){return state.playing&&!document.hidden&&state.stageVisible&&!state.reducedMotion&&!state.disposed;}
+  function postStream(type,payload,plan){
+    const id=++state.revision;
+    state.activeJob={id,type,chartKey:state.chart.key,sessionId:state.stream.id,plan,started:Date.now()};state.busy=true;
+    syncControls();
+    try{ensureWorker().postMessage({id,type,payload});}catch(e){state.activeJob=null;state.busy=false;reportError(e);syncControls();notifyIdle();}
+  }
+  function beginStream(){
+    if(state.stream||!state.result||state.busy||state.debounce)return;
+    state.leftMode='birth';$('leftMode').value='birth';
+    const id='continuous-'+(++state.streamSerial)+'-'+state.chart.key;
+    state.stream={id,startEpochMs:state.epochMs,started:false,current:null,buffered:null,sampleRemainder:0,
+      seedParameters:{...state.result.parameters},seedPoints:state.result.custom.slice(),replay:[]};
+    syncControls();draw();setStatus('准备从当前时刻连续演变…',1,'固定生辰核');
+    postStream('stream-start',{sessionId:id,chart:state.chart,epochMs:state.epochMs,seedPoints:state.stream.seedPoints,
+      seedParameters:state.stream.seedParameters,profile:state.profile,enabled:state.enabled.slice(),multipliers:state.multipliers.slice()});
+  }
+  function requestStreamAdvance(){
+    const stream=state.stream;
+    if(!canPlay()||!stream?.started||stream.buffered||state.activeJob)return;
+    const remaining=state.nowMs-stream.current.epochMs;
+    if(remaining<=0){pausePlayback(false);setStatus('已连续演变至今。',1,'固定生辰核');return;}
+    const exactSamples=state.playbackDaysPerSecond*86400000*(FRAME_MS/1000)/CIVIL_SAMPLE_MS+stream.sampleRemainder;
+    const sampleCount=Math.max(1,Math.floor(exactSamples+1e-12));
+    stream.sampleRemainder=exactSamples-sampleCount;
+    const civilDurationMs=Math.min(remaining,sampleCount*CIVIL_SAMPLE_MS),modelDuration=civilDurationMs/CIVIL_SAMPLE_MS*.01;
+    const plan={civilDurationMs,modelDuration,daysPerSecond:state.playbackDaysPerSecond};
+    postStream('stream-advance',{sessionId:stream.id,civilDurationMs,modelDuration},plan);
+  }
+  function acceptStreamFrame(frame,plan){
+    const stream=state.stream;if(!stream||frame.sessionId!==stream.id)return;
+    stream.current=frame;stream.buffered=null;
+    if(plan){const last=stream.replay.at(-1);if(last&&last.civilDurationMs===plan.civilDurationMs&&last.modelDuration===plan.modelDuration&&last.daysPerSecond===plan.daysPerSecond)last.count++;else stream.replay.push({...plan,count:1});}
+    state.epochMs=frame.epochMs;
+    state.result={...state.result,custom:frame.points,parameters:frame.parameters,targetParameters:frame.targetParameters,
+      noDayun:null,noDayunParameters:null,protocol:frame.protocol,temporal:frame.temporal,profile:frame.profile||state.profile,
+      morphology:{birth:state.natalMorphology,flow:null,noDayun:null},continuous:true};
+    state.temporal=frame.temporal;state.resultKey=requestKey();
+    renderContext(frame.temporal);renderParameters();draw();syncControls();
+    setText('flowBadge','连续演变');setText('rightMetric','连续驱动 · 非定常轨迹');
+    const remaining=Math.max(0,frame.seedPointsRemaining||0),total=frame.points.length/3;
+    setText('continuousState',`起点 ${labelTime(stream.startEpochMs)} · 连续段 ${Math.max(0,Math.min(100,100*(1-remaining/total))).toFixed(1)}% · 生辰核固定对照`);
+    if(state.epochMs>=state.nowMs){pausePlayback(false);setStatus('已连续演变至今。',1,'固定生辰核');}
+  }
+  function handleStreamMessage(data,job){
+    if(!state.stream||job.sessionId!==state.stream.id)return;
+    if(data.type==='progress')return;
+    state.activeJob=null;state.busy=false;
+    if(data.type==='error'){if(job.type==='stream-start')state.stream=null;reportError(data.error);syncControls();notifyIdle();return;}
+    const frame=data.result;
+    if(data.type!=='result'||!frame||frame.sessionId!==state.stream.id){reportError('连续积分返回了不匹配的会话');syncControls();notifyIdle();return;}
+    if(job.type==='stream-start'){
+      state.stream.started=true;acceptStreamFrame(frame);setStatus(state.playing?`连续演变 · 目标 ${state.playbackDaysPerSecond} 天/秒`:'已暂停 · 连续起点已准备',1,'真实续积分');
+      if(canPlay()){requestStreamAdvance();schedulePlayback();}
+    }else{
+      // A paused screen keeps its exact accepted frame. One computed packet
+      // may wait here and will be accepted only after an explicit resume.
+      state.stream.buffered={frame,plan:job.plan};
+      if(canPlay())schedulePlayback();
+    }
+    syncControls();notifyIdle();
+  }
+  function playbackTick(stamp){
+    state.playFrame=null;
+    if(!canPlay()){stopPlayFrame();return;}
+    if(state.lastPlayStamp===null)state.lastPlayStamp=stamp;
+    const elapsed=Math.max(0,Math.min(100,stamp-state.lastPlayStamp));state.lastPlayStamp=stamp;
+    state.playCredit=Math.min(FRAME_MS*2,state.playCredit+elapsed);
+    if(state.stream?.buffered&&state.playCredit>=FRAME_MS){
+      state.playCredit-=FRAME_MS;const ready=state.stream.buffered;acceptStreamFrame(ready.frame,ready.plan);
+      if(canPlay())requestStreamAdvance();
+    }else if(state.stream?.started&&!state.activeJob&&!state.stream.buffered)requestStreamAdvance();
+    if(canPlay())state.playFrame=window.requestAnimationFrame(playbackTick);
   }
   function schedulePlayback(){
-    clearTimeout(state.playTimer);state.playTimer=null;
-    if(!state.playing||state.busy||state.debounce||!state.result||document.hidden||!state.stageVisible||state.disposed||state.reducedMotion)return;
-    if(state.epochMs>=state.nowMs){pausePlayback(false);setStatus('已播放至今。',1,'');return;}
-    state.playTimer=setTimeout(()=>{state.playTimer=null;if(!state.playing)return;setTime(nextEpoch(),true);},state.playbackDelay);
+    if(!canPlay()||state.calibrating||state.debounce)return;
+    if(!state.stream){if(!state.busy&&state.result)beginStream();return;}
+    if(!state.stream.started)return;
+    if(!state.activeJob&&!state.stream.buffered)requestStreamAdvance();
+    if(state.playFrame===null)state.playFrame=window.requestAnimationFrame(playbackTick);
   }
   function startPlayback(){
     if(!state.chart||state.calibrating||state.reducedMotion||document.hidden||!state.stageVisible||state.disposed)return;
-    clearError();state.playing=true;renderPlay();
-    if(state.epochMs>=state.nowMs)setTime(state.chart.birthMs,true);
+    clearError();state.playing=true;syncControls();
+    if(state.stream?.detached){setStatus('重新准备当前时刻的连续起点…',0,'导航后新建会话');setTime(state.epochMs,true);}
+    else if(state.epochMs>=state.nowMs&&!state.stream)setTime(state.chart.birthMs,true);
+    else if(state.epochMs>=state.nowMs){pausePlayback(false);setStatus('已到当前时间。拖动时间轴可选择新的起点。',1,'');}
     else if(!state.busy&&!state.result)queueCompute(0);
     else schedulePlayback();
   }
   function calibrate(){
     if(!state.chart||state.busy)return;
-    pausePlayback(false);cancelJob();clearError();state.busy=true;state.calibrating=true;
+    pausePlayback(false);cancelJob(undefined,false,!!state.stream);clearError();state.busy=true;state.calibrating=true;
     const id=++state.revision;state.activeJob={id,type:'calibrate',chartKey:state.chart.key,started:Date.now(),lastProgress:0};
     renderProfile();syncControls();setStatus('开始出生专属校准 · 756 条件，可能需要数分钟',0,'0 / 756');
     try{ensureWorker().postMessage({id,type:'calibrate',payload:{chart:state.chart}});}catch(e){state.activeJob=null;state.busy=false;state.calibrating=false;reportError(e);syncControls();notifyIdle();}
   }
   function cancelCalibration(){
-    if(!state.calibrating)return;cancelJob('校准已停止 · 保留原有映射与预览。');renderProfile();syncControls();notifyIdle();
+    if(!state.calibrating)return;cancelJob('校准已停止 · 保留原有映射与预览。',false,!!state.stream);renderProfile();syncControls();notifyIdle();
   }
   function snapshot(){
-    return {product:'TAONIQ',interfaceVersion:'0.10.1',algorithmVersion:MODEL?.version,exportedAt:new Date().toISOString(),birth:state.chart?.input,timezone:'UTC+08:00',pillars:state.chart?.pillars,observationTime:iso(state.epochMs),epochMs:state.epochMs,enabled:state.enabled.slice(),multipliers:state.multipliers.slice(),defaultInputBudgets:MODEL?.weights,leftMode:state.leftMode,reference:state.leftMode==='noDayun'?{type:'noDayun',meaning:'Same observation date and settings with only the dayun layer disabled.',enabled:[false,...state.enabled.slice(1)],parameters:state.result?.noDayunParameters}:{type:'birth',meaning:'Fixed natal eight parameters with all temporal layers absent.',parameters:state.chart?.parameters},temporal:state.temporal,birthParameters:state.chart?.parameters,flowParameters:state.result?.parameters,noDayunParameters:state.result?.noDayunParameters,profile:state.profile,domain:{repaired:state.chart?.domainFallback,anchor:state.chart?.anchorId,originalAnchor:state.chart?.originalAnchorId},projection:{...MODEL?.projection,type:'perspective',cameraDistanceRadii:VIEW.cameraDistanceRadii},camera:{...state.camera},zoom:state.zoom,animation:{autoRotate:state.autoRotate,rotationDegreesPerSecond:state.rotationSpeed,playing:state.playing,step:$('playStep').value,holdMilliseconds:state.playbackDelay},protocol:state.result?.protocol,morphology:state.result?.morphology,validComputedResult:!!state.result&&state.resultKey===requestKey(),interpretation:'Engineering symbolic visualization; no fate prediction. Each date is independently integrated with frozen parameters, not accumulated history. Camera rotation changes only the 3D view.'};
+    const stream=state.stream,frame=stream?.current;
+    const continuous=stream&&frame?{
+      sessionId:stream.id,startEpochMs:stream.startEpochMs,modelUnitsPerCivilDay:MODEL_UNITS_PER_CIVIL_DAY,
+      seedParameters:{...stream.seedParameters},seedPoints:Array.from(stream.seedPoints),
+      current:{epochMs:frame.epochMs,modelElapsed:frame.modelElapsed,points:Array.from(frame.points),parameters:frame.parameters,
+        targetParameters:frame.targetParameters,checkpoint:frame.checkpoint,protocol:frame.protocol,seedPointsRemaining:frame.seedPointsRemaining},
+      replay:stream.replay.map(segment=>({...segment})),detached:!!stream.detached,
+      meaning:'Snapshot of the displayed continued trajectory from the recorded start. Not a reconstruction of the complete life history. No import control is provided.'
+    }:null;
+    return {
+      product:'TAONIQ',interfaceVersion:'0.11.0',algorithmVersion:MODEL?.version,exportedAt:new Date().toISOString(),
+      birth:state.chart?.input,timezone:'UTC+08:00',pillars:state.chart?.pillars,observationTime:iso(state.epochMs),epochMs:state.epochMs,
+      enabled:state.enabled.slice(),multipliers:state.multipliers.slice(),defaultInputBudgets:MODEL?.weights,leftMode:state.leftMode,
+      reference:state.leftMode==='noDayun'?{type:'noDayun',meaning:'Same frozen observation date and settings with only the dayun layer disabled.',enabled:[false,...state.enabled.slice(1)],parameters:state.result?.noDayunParameters}:{type:'birth',meaning:'Fixed natal eight parameters and fixed natal point array, with no temporal layers.',parameters:state.chart?.parameters},
+      temporal:state.temporal,birthParameters:state.chart?.parameters,flowParameters:state.result?.parameters,
+      targetParameters:state.result?.targetParameters,noDayunParameters:state.result?.noDayunParameters,profile:state.profile,
+      domain:{repaired:state.chart?.domainFallback,anchor:state.chart?.anchorId,originalAnchor:state.chart?.originalAnchorId},
+      projection:{...MODEL?.projection,type:'perspective',cameraDistanceRadii:VIEW.cameraDistanceRadii},camera:{...state.camera},zoom:state.zoom,
+      animation:{autoRotate:state.autoRotate,rotationDegreesPerSecond:state.rotationSpeed,playing:state.playing,manualStep:$('playStep').value,daysPerSecond:state.playbackDaysPerSecond},
+      continuous,protocol:state.result?.protocol,morphology:state.result?.morphology,
+      validComputedResult:!!state.result&&state.resultKey===requestKey(),
+      interpretation:continuous?'Engineering non-autonomous continuation from the recorded selected start, with fixed natal comparison; no fate prediction. Playback speed changes viewing rate, not the calendar/model-time ratio. Camera rotation changes only the 3D view.':'Engineering symbolic visualization; no fate prediction. This is a frozen-date starting view, not accumulated history.'
+    };
   }
   function exportSnapshot(){
     if(!state.result||state.resultKey!==requestKey())return null;
@@ -337,7 +449,7 @@
     $('goNow').addEventListener('click',()=>{state.nowMs=Date.now();setTime(state.nowMs);});
     $('play').addEventListener('click',()=>state.playing?pausePlayback(true):startPlayback());
     $('playStep').addEventListener('change',()=>pausePlayback(true));
-    $('playDelay').addEventListener('change',()=>setPlaybackDelay(Number($('playDelay').value)));
+    $('playDelay').addEventListener('change',()=>setPlaybackSpeed(Number($('playDelay').value)));
     $('prevTime').addEventListener('click',()=>stepTime(-1));$('nextTime').addEventListener('click',()=>stepTime(1));
     $('autoRotate').addEventListener('change',()=>setAutoRotate($('autoRotate').checked));
     $('rotationSpeed').addEventListener('input',()=>setRotationSpeed(Number($('rotationSpeed').value)));
@@ -358,7 +470,7 @@
       });
     });
     window.addEventListener('resize',draw);
-    document.addEventListener('visibilitychange',()=>{if(document.hidden){setAutoRotate(false);pausePlayback(false);if(state.activeJob||state.debounce){const wasCalibration=state.calibrating;cancelJob(wasCalibration?'页面已隐藏，校准已停止；返回后可重新开始。':'页面已隐藏，当前计算已停止。');renderProfile();syncControls();notifyIdle();}}else resumeCurrentView();});
+    document.addEventListener('visibilitychange',()=>{if(document.hidden){setAutoRotate(false);pausePlayback(false);if((state.activeJob||state.debounce)&&!state.stream){const wasCalibration=state.calibrating;cancelJob(wasCalibration?'页面已隐藏，校准已停止；返回后可重新开始。':'页面已隐藏，当前计算已停止。');renderProfile();syncControls();notifyIdle();}}else resumeCurrentView();});
     reduced.addEventListener?.('change',e=>{state.reducedMotion=e.matches;if(e.matches){setAutoRotate(false);pausePlayback(false);}syncControls();});
     if(window.IntersectionObserver){const observer=new IntersectionObserver(entries=>{
       state.stageVisible=entries.every(e=>e.isIntersecting);
@@ -368,10 +480,10 @@
       // preference, but schedules no frames until the plots first enter view.
       syncRotation();
     },{threshold:0});observer.observe($('stage'));}
-    window.addEventListener('pagehide',()=>{state.disposed=true;setAutoRotate(false);pausePlayback(false);cancelJob();if(state.worker){state.worker.terminate();state.worker=null;}});
-    window.addEventListener('pageshow',()=>{if(!state.disposed)return;state.disposed=false;renderProfile();syncControls();resumeCurrentView();draw();});
+    window.addEventListener('pagehide',()=>{state.disposed=true;setAutoRotate(false);pausePlayback(false);cancelJob(undefined,false,!!state.stream);if(state.worker){state.worker.terminate();state.worker=null;}});
+    window.addEventListener('pageshow',()=>{if(!state.disposed)return;state.disposed=false;renderProfile();syncControls();resumeCurrentView();draw();if(state.stream?.detached)setStatus('末帧已保留。再次播放会重新准备此时刻的起点。',1,'导航后会话已停止');});
   }
-  window.TaoApp={state,ready,whenIdle,submitBirth,setTime,setLayer,stepTime,setPlaybackDelay,setAutoRotate,setRotationSpeed,startPlayback,pause:()=>pausePlayback(true),calibrate,cancelCalibration,snapshot,exportSnapshot,draw,requestKey,cancel:()=>{setAutoRotate(false);pausePlayback(false);cancelJob('计算已取消。');renderProfile();syncControls();notifyIdle();}};
+  window.TaoApp={state,ready,whenIdle,submitBirth,setTime,setLayer,stepTime,setPlaybackSpeed,setPlaybackDelay:setPlaybackSpeed,setAutoRotate,setRotationSpeed,startPlayback,pause:()=>pausePlayback(true),calibrate,cancelCalibration,snapshot,exportSnapshot,draw,requestKey,cancel:()=>{setAutoRotate(false);pausePlayback(false);cancelJob('计算已取消。',false,!!state.stream);renderProfile();syncControls();notifyIdle();}};
   try{
     if(!MODEL||!window.TaoWorker||!VIEW)throw Error('算法或三维显示资源未能加载，请保持 assets 文件夹与此页面同目录。');
     $('birthDate').min='1901-01-01';$('birthDate').max=iso(state.nowMs).slice(0,10);
