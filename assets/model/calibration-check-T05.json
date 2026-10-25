@@ -1,0 +1,865 @@
+{
+  "id": "T05",
+  "elapsedMs": 14286,
+  "completed": 756,
+  "passed": true,
+  "selected": "v08",
+  "expected": "v08",
+  "stats": {
+    "selected": {
+      "candidate": "v08",
+      "complete": true,
+      "count": 84,
+      "points": 1,
+      "simple": 39,
+      "default_simple": 6,
+      "world": 0.17195769846544331,
+      "shape": 0.26271671053983325,
+      "effects": [
+        {
+          "world": {
+            "hellinger": 0.19224036526349658,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.3018506905871753,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "world": {
+            "hellinger": 0.13159969526553406,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.1873852751753169,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "world": {
+            "hellinger": 0.12524282036239814,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.1864681751331364,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "world": {
+            "hellinger": 0.09427353829365442,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.1636545074423777,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "world": {
+            "hellinger": 0.2408897742284229,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.3490543891706491,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "world": {
+            "hellinger": 0.12561070376739106,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.22143114176815898,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "world": {
+            "hellinger": 0.12691701111828504,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.22342367182065664,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "world": {
+            "hellinger": 0.2720380293002967,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.4132504156059015,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "world": {
+            "hellinger": 0.23501126989904336,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.3538832868842956,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "world": {
+            "hellinger": 0.190566673012876,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.3135811744166187,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "world": {
+            "hellinger": 0.22913415422113176,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.2790281150843617,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "world": {
+            "hellinger": 0.09996834685278998,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.15958968338935034,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "world_ratio": 1,
+      "shape_ratio": 1,
+      "effect_score": 1,
+      "eligible": false
+    },
+    "baseline": {
+      "candidate": "v08",
+      "complete": true,
+      "count": 84,
+      "points": 1,
+      "simple": 39,
+      "default_simple": 6,
+      "world": 0.17195769846544331,
+      "shape": 0.26271671053983325,
+      "effects": [
+        {
+          "world": {
+            "hellinger": 0.19224036526349658,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.3018506905871753,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "world": {
+            "hellinger": 0.13159969526553406,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.1873852751753169,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "world": {
+            "hellinger": 0.12524282036239814,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.1864681751331364,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "world": {
+            "hellinger": 0.09427353829365442,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.1636545074423777,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "world": {
+            "hellinger": 0.2408897742284229,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.3490543891706491,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "world": {
+            "hellinger": 0.12561070376739106,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.22143114176815898,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "world": {
+            "hellinger": 0.12691701111828504,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.22342367182065664,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "world": {
+            "hellinger": 0.2720380293002967,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.4132504156059015,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "world": {
+            "hellinger": 0.23501126989904336,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.3538832868842956,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "world": {
+            "hellinger": 0.190566673012876,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.3135811744166187,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "world": {
+            "hellinger": 0.22913415422113176,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.2790281150843617,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "world": {
+            "hellinger": 0.09996834685278998,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          },
+          "centered_rms_normalized": {
+            "hellinger": 0.15958968338935034,
+            "clipped_fraction": [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "world_ratio": 1,
+      "shape_ratio": 1,
+      "effect_score": 1,
+      "eligible": false
+    },
+    "canonicalProbes": 12,
+    "probeNodes": 7,
+    "protocol": "birth-only-canonical-v1.1"
+  },
+  "profile": {
+    "id": "v08",
+    "label": "校准后保留 v0.8",
+    "candidate": {
+      "id": "v08",
+      "gain": 0.15
+    },
+    "key": "{\"pillars\":[\"丁卯\",\"戊申\",\"丁未\",\"甲辰\"],\"params\":[0.8644228937343983,0.9419844048496113,1.1699398356877013,3.9117014449457934,0.5381123803555683,0.4059110840272232,2.0249446497617716,4.090322140856892]}",
+    "protocol": "birth-only-canonical-v1.1",
+    "status": "calibrated_fallback_v08",
+    "fallback": true,
+    "eligibleCount": 0,
+    "source": "local-756-condition-calibration",
+    "calibrationStats": {
+      "selected": {
+        "candidate": "v08",
+        "complete": true,
+        "count": 84,
+        "points": 1,
+        "simple": 39,
+        "default_simple": 6,
+        "world": 0.17195769846544331,
+        "shape": 0.26271671053983325,
+        "effects": [
+          {
+            "world": {
+              "hellinger": 0.19224036526349658,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.3018506905871753,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "world": {
+              "hellinger": 0.13159969526553406,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.1873852751753169,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "world": {
+              "hellinger": 0.12524282036239814,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.1864681751331364,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "world": {
+              "hellinger": 0.09427353829365442,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.1636545074423777,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "world": {
+              "hellinger": 0.2408897742284229,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.3490543891706491,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "world": {
+              "hellinger": 0.12561070376739106,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.22143114176815898,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "world": {
+              "hellinger": 0.12691701111828504,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.22342367182065664,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "world": {
+              "hellinger": 0.2720380293002967,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.4132504156059015,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "world": {
+              "hellinger": 0.23501126989904336,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.3538832868842956,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "world": {
+              "hellinger": 0.190566673012876,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.3135811744166187,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "world": {
+              "hellinger": 0.22913415422113176,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.2790281150843617,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "world": {
+              "hellinger": 0.09996834685278998,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.15958968338935034,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          }
+        ],
+        "world_ratio": 1,
+        "shape_ratio": 1,
+        "effect_score": 1,
+        "eligible": false
+      },
+      "baseline": {
+        "candidate": "v08",
+        "complete": true,
+        "count": 84,
+        "points": 1,
+        "simple": 39,
+        "default_simple": 6,
+        "world": 0.17195769846544331,
+        "shape": 0.26271671053983325,
+        "effects": [
+          {
+            "world": {
+              "hellinger": 0.19224036526349658,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.3018506905871753,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "world": {
+              "hellinger": 0.13159969526553406,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.1873852751753169,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "world": {
+              "hellinger": 0.12524282036239814,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.1864681751331364,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "world": {
+              "hellinger": 0.09427353829365442,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.1636545074423777,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "world": {
+              "hellinger": 0.2408897742284229,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.3490543891706491,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "world": {
+              "hellinger": 0.12561070376739106,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.22143114176815898,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "world": {
+              "hellinger": 0.12691701111828504,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.22342367182065664,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "world": {
+              "hellinger": 0.2720380293002967,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.4132504156059015,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "world": {
+              "hellinger": 0.23501126989904336,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.3538832868842956,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "world": {
+              "hellinger": 0.190566673012876,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.3135811744166187,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "world": {
+              "hellinger": 0.22913415422113176,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.2790281150843617,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "world": {
+              "hellinger": 0.09996834685278998,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            },
+            "centered_rms_normalized": {
+              "hellinger": 0.15958968338935034,
+              "clipped_fraction": [
+                0,
+                0
+              ]
+            }
+          }
+        ],
+        "world_ratio": 1,
+        "shape_ratio": 1,
+        "effect_score": 1,
+        "eligible": false
+      },
+      "canonicalProbes": 12,
+      "probeNodes": 7,
+      "protocol": "birth-only-canonical-v1.1"
+    },
+    "domainFallback": false
+  }
+}

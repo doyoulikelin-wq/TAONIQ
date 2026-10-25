@@ -1,0 +1,2354 @@
+[
+  {
+    "caseId": "T01",
+    "gender": "male",
+    "birthMs": -137044800000,
+    "birthPillars": [
+      "乙巳",
+      "甲申",
+      "乙卯",
+      "戊寅"
+    ],
+    "firstStartMs": 84715200000,
+    "startAge": {
+      "years": 7,
+      "months": 0,
+      "days": 9,
+      "hours": 16
+    },
+    "direction": "reverse",
+    "periods": [
+      {
+        "step": 1,
+        "pillar": "癸未",
+        "jiaziIndex": 19,
+        "startMs": 84715200000,
+        "endMs": 400248000000,
+        "startDateTime": "1972-09-07T20:00:00.000+08:00",
+        "endDateTime": "1982-09-07T20:00:00.000+08:00"
+      },
+      {
+        "step": 2,
+        "pillar": "壬午",
+        "jiaziIndex": 18,
+        "startMs": 400248000000,
+        "endMs": 715867200000,
+        "startDateTime": "1982-09-07T20:00:00.000+08:00",
+        "endDateTime": "1992-09-07T20:00:00.000+08:00"
+      },
+      {
+        "step": 3,
+        "pillar": "辛巳",
+        "jiaziIndex": 17,
+        "startMs": 715867200000,
+        "endMs": 1031400000000,
+        "startDateTime": "1992-09-07T20:00:00.000+08:00",
+        "endDateTime": "2002-09-07T20:00:00.000+08:00"
+      },
+      {
+        "step": 4,
+        "pillar": "庚辰",
+        "jiaziIndex": 16,
+        "startMs": 1031400000000,
+        "endMs": 1347019200000,
+        "startDateTime": "2002-09-07T20:00:00.000+08:00",
+        "endDateTime": "2012-09-07T20:00:00.000+08:00"
+      },
+      {
+        "step": 5,
+        "pillar": "己卯",
+        "jiaziIndex": 15,
+        "startMs": 1347019200000,
+        "endMs": 1662552000000,
+        "startDateTime": "2012-09-07T20:00:00.000+08:00",
+        "endDateTime": "2022-09-07T20:00:00.000+08:00"
+      },
+      {
+        "step": 6,
+        "pillar": "戊寅",
+        "jiaziIndex": 14,
+        "startMs": 1662552000000,
+        "endMs": 1978171200000,
+        "startDateTime": "2022-09-07T20:00:00.000+08:00",
+        "endDateTime": "2032-09-07T20:00:00.000+08:00"
+      },
+      {
+        "step": 7,
+        "pillar": "丁丑",
+        "jiaziIndex": 13,
+        "startMs": 1978171200000,
+        "endMs": 2293704000000,
+        "startDateTime": "2032-09-07T20:00:00.000+08:00",
+        "endDateTime": "2042-09-07T20:00:00.000+08:00"
+      },
+      {
+        "step": 8,
+        "pillar": "丙子",
+        "jiaziIndex": 12,
+        "startMs": 2293704000000,
+        "endMs": 2609323200000,
+        "startDateTime": "2042-09-07T20:00:00.000+08:00",
+        "endDateTime": "2052-09-07T20:00:00.000+08:00"
+      },
+      {
+        "step": 9,
+        "pillar": "乙亥",
+        "jiaziIndex": 11,
+        "startMs": 2609323200000,
+        "endMs": 2924856000000,
+        "startDateTime": "2052-09-07T20:00:00.000+08:00",
+        "endDateTime": "2062-09-07T20:00:00.000+08:00"
+      },
+      {
+        "step": 10,
+        "pillar": "甲戌",
+        "jiaziIndex": 10,
+        "startMs": 2924856000000,
+        "endMs": 3240475200000,
+        "startDateTime": "2062-09-07T20:00:00.000+08:00",
+        "endDateTime": "2072-09-07T20:00:00.000+08:00"
+      },
+      {
+        "step": 11,
+        "pillar": "癸酉",
+        "jiaziIndex": 9,
+        "startMs": 3240475200000,
+        "endMs": 3556008000000,
+        "startDateTime": "2072-09-07T20:00:00.000+08:00",
+        "endDateTime": "2082-09-07T20:00:00.000+08:00"
+      },
+      {
+        "step": 12,
+        "pillar": "壬申",
+        "jiaziIndex": 8,
+        "startMs": 3556008000000,
+        "endMs": 3871627200000,
+        "startDateTime": "2082-09-07T20:00:00.000+08:00",
+        "endDateTime": "2092-09-07T20:00:00.000+08:00"
+      },
+      {
+        "step": 13,
+        "pillar": "辛未",
+        "jiaziIndex": 7,
+        "startMs": 3871627200000,
+        "endMs": 4187073600000,
+        "startDateTime": "2092-09-07T20:00:00.000+08:00",
+        "endDateTime": "2102-09-07T20:00:00.000+08:00"
+      },
+      {
+        "step": 14,
+        "pillar": "庚午",
+        "jiaziIndex": 6,
+        "startMs": 4187073600000,
+        "endMs": 4502692800000,
+        "startDateTime": "2102-09-07T20:00:00.000+08:00",
+        "endDateTime": "2112-09-07T20:00:00.000+08:00"
+      }
+    ]
+  },
+  {
+    "caseId": "T01",
+    "gender": "female",
+    "birthMs": -137044800000,
+    "birthPillars": [
+      "乙巳",
+      "甲申",
+      "乙卯",
+      "戊寅"
+    ],
+    "firstStartMs": -31471200000,
+    "startAge": {
+      "years": 3,
+      "months": 4,
+      "days": 3,
+      "hours": 22
+    },
+    "direction": "forward",
+    "periods": [
+      {
+        "step": 1,
+        "pillar": "乙酉",
+        "jiaziIndex": 21,
+        "startMs": -31471200000,
+        "endMs": 284061600000,
+        "startDateTime": "1969-01-02T02:00:00.000+08:00",
+        "endDateTime": "1979-01-02T02:00:00.000+08:00"
+      },
+      {
+        "step": 2,
+        "pillar": "丙戌",
+        "jiaziIndex": 22,
+        "startMs": 284061600000,
+        "endMs": 599680800000,
+        "startDateTime": "1979-01-02T02:00:00.000+08:00",
+        "endDateTime": "1989-01-02T02:00:00.000+08:00"
+      },
+      {
+        "step": 3,
+        "pillar": "丁亥",
+        "jiaziIndex": 23,
+        "startMs": 599680800000,
+        "endMs": 915213600000,
+        "startDateTime": "1989-01-02T02:00:00.000+08:00",
+        "endDateTime": "1999-01-02T02:00:00.000+08:00"
+      },
+      {
+        "step": 4,
+        "pillar": "戊子",
+        "jiaziIndex": 24,
+        "startMs": 915213600000,
+        "endMs": 1230832800000,
+        "startDateTime": "1999-01-02T02:00:00.000+08:00",
+        "endDateTime": "2009-01-02T02:00:00.000+08:00"
+      },
+      {
+        "step": 5,
+        "pillar": "己丑",
+        "jiaziIndex": 25,
+        "startMs": 1230832800000,
+        "endMs": 1546365600000,
+        "startDateTime": "2009-01-02T02:00:00.000+08:00",
+        "endDateTime": "2019-01-02T02:00:00.000+08:00"
+      },
+      {
+        "step": 6,
+        "pillar": "庚寅",
+        "jiaziIndex": 26,
+        "startMs": 1546365600000,
+        "endMs": 1861984800000,
+        "startDateTime": "2019-01-02T02:00:00.000+08:00",
+        "endDateTime": "2029-01-02T02:00:00.000+08:00"
+      },
+      {
+        "step": 7,
+        "pillar": "辛卯",
+        "jiaziIndex": 27,
+        "startMs": 1861984800000,
+        "endMs": 2177517600000,
+        "startDateTime": "2029-01-02T02:00:00.000+08:00",
+        "endDateTime": "2039-01-02T02:00:00.000+08:00"
+      },
+      {
+        "step": 8,
+        "pillar": "壬辰",
+        "jiaziIndex": 28,
+        "startMs": 2177517600000,
+        "endMs": 2493136800000,
+        "startDateTime": "2039-01-02T02:00:00.000+08:00",
+        "endDateTime": "2049-01-02T02:00:00.000+08:00"
+      },
+      {
+        "step": 9,
+        "pillar": "癸巳",
+        "jiaziIndex": 29,
+        "startMs": 2493136800000,
+        "endMs": 2808669600000,
+        "startDateTime": "2049-01-02T02:00:00.000+08:00",
+        "endDateTime": "2059-01-02T02:00:00.000+08:00"
+      },
+      {
+        "step": 10,
+        "pillar": "甲午",
+        "jiaziIndex": 30,
+        "startMs": 2808669600000,
+        "endMs": 3124288800000,
+        "startDateTime": "2059-01-02T02:00:00.000+08:00",
+        "endDateTime": "2069-01-02T02:00:00.000+08:00"
+      },
+      {
+        "step": 11,
+        "pillar": "乙未",
+        "jiaziIndex": 31,
+        "startMs": 3124288800000,
+        "endMs": 3439821600000,
+        "startDateTime": "2069-01-02T02:00:00.000+08:00",
+        "endDateTime": "2079-01-02T02:00:00.000+08:00"
+      },
+      {
+        "step": 12,
+        "pillar": "丙申",
+        "jiaziIndex": 32,
+        "startMs": 3439821600000,
+        "endMs": 3755440800000,
+        "startDateTime": "2079-01-02T02:00:00.000+08:00",
+        "endDateTime": "2089-01-02T02:00:00.000+08:00"
+      },
+      {
+        "step": 13,
+        "pillar": "丁酉",
+        "jiaziIndex": 33,
+        "startMs": 3755440800000,
+        "endMs": 4070973600000,
+        "startDateTime": "2089-01-02T02:00:00.000+08:00",
+        "endDateTime": "2099-01-02T02:00:00.000+08:00"
+      },
+      {
+        "step": 14,
+        "pillar": "戊戌",
+        "jiaziIndex": 34,
+        "startMs": 4070973600000,
+        "endMs": 4386506400000,
+        "startDateTime": "2099-01-02T02:00:00.000+08:00",
+        "endDateTime": "2109-01-02T02:00:00.000+08:00"
+      }
+    ]
+  },
+  {
+    "caseId": "T02",
+    "gender": "male",
+    "birthMs": 178315200000,
+    "birthPillars": [
+      "乙卯",
+      "甲申",
+      "乙巳",
+      "戊寅"
+    ],
+    "firstStartMs": 374817600000,
+    "startAge": {
+      "years": 6,
+      "months": 2,
+      "days": 21,
+      "hours": 8
+    },
+    "direction": "reverse",
+    "periods": [
+      {
+        "step": 1,
+        "pillar": "癸未",
+        "jiaziIndex": 19,
+        "startMs": 374817600000,
+        "endMs": 690350400000,
+        "startDateTime": "1981-11-17T12:00:00.000+08:00",
+        "endDateTime": "1991-11-17T12:00:00.000+08:00"
+      },
+      {
+        "step": 2,
+        "pillar": "壬午",
+        "jiaziIndex": 18,
+        "startMs": 690350400000,
+        "endMs": 1005969600000,
+        "startDateTime": "1991-11-17T12:00:00.000+08:00",
+        "endDateTime": "2001-11-17T12:00:00.000+08:00"
+      },
+      {
+        "step": 3,
+        "pillar": "辛巳",
+        "jiaziIndex": 17,
+        "startMs": 1005969600000,
+        "endMs": 1321502400000,
+        "startDateTime": "2001-11-17T12:00:00.000+08:00",
+        "endDateTime": "2011-11-17T12:00:00.000+08:00"
+      },
+      {
+        "step": 4,
+        "pillar": "庚辰",
+        "jiaziIndex": 16,
+        "startMs": 1321502400000,
+        "endMs": 1637121600000,
+        "startDateTime": "2011-11-17T12:00:00.000+08:00",
+        "endDateTime": "2021-11-17T12:00:00.000+08:00"
+      },
+      {
+        "step": 5,
+        "pillar": "己卯",
+        "jiaziIndex": 15,
+        "startMs": 1637121600000,
+        "endMs": 1952654400000,
+        "startDateTime": "2021-11-17T12:00:00.000+08:00",
+        "endDateTime": "2031-11-17T12:00:00.000+08:00"
+      },
+      {
+        "step": 6,
+        "pillar": "戊寅",
+        "jiaziIndex": 14,
+        "startMs": 1952654400000,
+        "endMs": 2268273600000,
+        "startDateTime": "2031-11-17T12:00:00.000+08:00",
+        "endDateTime": "2041-11-17T12:00:00.000+08:00"
+      },
+      {
+        "step": 7,
+        "pillar": "丁丑",
+        "jiaziIndex": 13,
+        "startMs": 2268273600000,
+        "endMs": 2583806400000,
+        "startDateTime": "2041-11-17T12:00:00.000+08:00",
+        "endDateTime": "2051-11-17T12:00:00.000+08:00"
+      },
+      {
+        "step": 8,
+        "pillar": "丙子",
+        "jiaziIndex": 12,
+        "startMs": 2583806400000,
+        "endMs": 2899425600000,
+        "startDateTime": "2051-11-17T12:00:00.000+08:00",
+        "endDateTime": "2061-11-17T12:00:00.000+08:00"
+      },
+      {
+        "step": 9,
+        "pillar": "乙亥",
+        "jiaziIndex": 11,
+        "startMs": 2899425600000,
+        "endMs": 3214958400000,
+        "startDateTime": "2061-11-17T12:00:00.000+08:00",
+        "endDateTime": "2071-11-17T12:00:00.000+08:00"
+      },
+      {
+        "step": 10,
+        "pillar": "甲戌",
+        "jiaziIndex": 10,
+        "startMs": 3214958400000,
+        "endMs": 3530577600000,
+        "startDateTime": "2071-11-17T12:00:00.000+08:00",
+        "endDateTime": "2081-11-17T12:00:00.000+08:00"
+      },
+      {
+        "step": 11,
+        "pillar": "癸酉",
+        "jiaziIndex": 9,
+        "startMs": 3530577600000,
+        "endMs": 3846110400000,
+        "startDateTime": "2081-11-17T12:00:00.000+08:00",
+        "endDateTime": "2091-11-17T12:00:00.000+08:00"
+      },
+      {
+        "step": 12,
+        "pillar": "壬申",
+        "jiaziIndex": 8,
+        "startMs": 3846110400000,
+        "endMs": 4161643200000,
+        "startDateTime": "2091-11-17T12:00:00.000+08:00",
+        "endDateTime": "2101-11-17T12:00:00.000+08:00"
+      },
+      {
+        "step": 13,
+        "pillar": "辛未",
+        "jiaziIndex": 7,
+        "startMs": 4161643200000,
+        "endMs": 4477176000000,
+        "startDateTime": "2101-11-17T12:00:00.000+08:00",
+        "endDateTime": "2111-11-17T12:00:00.000+08:00"
+      },
+      {
+        "step": 14,
+        "pillar": "庚午",
+        "jiaziIndex": 6,
+        "startMs": 4477176000000,
+        "endMs": 4792795200000,
+        "startDateTime": "2111-11-17T12:00:00.000+08:00",
+        "endDateTime": "2121-11-17T12:00:00.000+08:00"
+      }
+    ]
+  },
+  {
+    "caseId": "T02",
+    "gender": "female",
+    "birthMs": 178315200000,
+    "birthPillars": [
+      "乙卯",
+      "甲申",
+      "乙巳",
+      "戊寅"
+    ],
+    "firstStartMs": 309189600000,
+    "startAge": {
+      "years": 4,
+      "months": 1,
+      "days": 22,
+      "hours": 18
+    },
+    "direction": "forward",
+    "periods": [
+      {
+        "step": 1,
+        "pillar": "乙酉",
+        "jiaziIndex": 21,
+        "startMs": 309189600000,
+        "endMs": 624808800000,
+        "startDateTime": "1979-10-19T22:00:00.000+08:00",
+        "endDateTime": "1989-10-19T22:00:00.000+08:00"
+      },
+      {
+        "step": 2,
+        "pillar": "丙戌",
+        "jiaziIndex": 22,
+        "startMs": 624808800000,
+        "endMs": 940341600000,
+        "startDateTime": "1989-10-19T22:00:00.000+08:00",
+        "endDateTime": "1999-10-19T22:00:00.000+08:00"
+      },
+      {
+        "step": 3,
+        "pillar": "丁亥",
+        "jiaziIndex": 23,
+        "startMs": 940341600000,
+        "endMs": 1255960800000,
+        "startDateTime": "1999-10-19T22:00:00.000+08:00",
+        "endDateTime": "2009-10-19T22:00:00.000+08:00"
+      },
+      {
+        "step": 4,
+        "pillar": "戊子",
+        "jiaziIndex": 24,
+        "startMs": 1255960800000,
+        "endMs": 1571493600000,
+        "startDateTime": "2009-10-19T22:00:00.000+08:00",
+        "endDateTime": "2019-10-19T22:00:00.000+08:00"
+      },
+      {
+        "step": 5,
+        "pillar": "己丑",
+        "jiaziIndex": 25,
+        "startMs": 1571493600000,
+        "endMs": 1887112800000,
+        "startDateTime": "2019-10-19T22:00:00.000+08:00",
+        "endDateTime": "2029-10-19T22:00:00.000+08:00"
+      },
+      {
+        "step": 6,
+        "pillar": "庚寅",
+        "jiaziIndex": 26,
+        "startMs": 1887112800000,
+        "endMs": 2202645600000,
+        "startDateTime": "2029-10-19T22:00:00.000+08:00",
+        "endDateTime": "2039-10-19T22:00:00.000+08:00"
+      },
+      {
+        "step": 7,
+        "pillar": "辛卯",
+        "jiaziIndex": 27,
+        "startMs": 2202645600000,
+        "endMs": 2518264800000,
+        "startDateTime": "2039-10-19T22:00:00.000+08:00",
+        "endDateTime": "2049-10-19T22:00:00.000+08:00"
+      },
+      {
+        "step": 8,
+        "pillar": "壬辰",
+        "jiaziIndex": 28,
+        "startMs": 2518264800000,
+        "endMs": 2833797600000,
+        "startDateTime": "2049-10-19T22:00:00.000+08:00",
+        "endDateTime": "2059-10-19T22:00:00.000+08:00"
+      },
+      {
+        "step": 9,
+        "pillar": "癸巳",
+        "jiaziIndex": 29,
+        "startMs": 2833797600000,
+        "endMs": 3149416800000,
+        "startDateTime": "2059-10-19T22:00:00.000+08:00",
+        "endDateTime": "2069-10-19T22:00:00.000+08:00"
+      },
+      {
+        "step": 10,
+        "pillar": "甲午",
+        "jiaziIndex": 30,
+        "startMs": 3149416800000,
+        "endMs": 3464949600000,
+        "startDateTime": "2069-10-19T22:00:00.000+08:00",
+        "endDateTime": "2079-10-19T22:00:00.000+08:00"
+      },
+      {
+        "step": 11,
+        "pillar": "乙未",
+        "jiaziIndex": 31,
+        "startMs": 3464949600000,
+        "endMs": 3780568800000,
+        "startDateTime": "2079-10-19T22:00:00.000+08:00",
+        "endDateTime": "2089-10-19T22:00:00.000+08:00"
+      },
+      {
+        "step": 12,
+        "pillar": "丙申",
+        "jiaziIndex": 32,
+        "startMs": 3780568800000,
+        "endMs": 4096101600000,
+        "startDateTime": "2089-10-19T22:00:00.000+08:00",
+        "endDateTime": "2099-10-19T22:00:00.000+08:00"
+      },
+      {
+        "step": 13,
+        "pillar": "丁酉",
+        "jiaziIndex": 33,
+        "startMs": 4096101600000,
+        "endMs": 4411634400000,
+        "startDateTime": "2099-10-19T22:00:00.000+08:00",
+        "endDateTime": "2109-10-19T22:00:00.000+08:00"
+      },
+      {
+        "step": 14,
+        "pillar": "戊戌",
+        "jiaziIndex": 34,
+        "startMs": 4411634400000,
+        "endMs": 4727167200000,
+        "startDateTime": "2109-10-19T22:00:00.000+08:00",
+        "endDateTime": "2119-10-19T22:00:00.000+08:00"
+      }
+    ]
+  },
+  {
+    "caseId": "T03",
+    "gender": "male",
+    "birthMs": 1135468800000,
+    "birthPillars": [
+      "乙酉",
+      "戊子",
+      "癸未",
+      "丙辰"
+    ],
+    "firstStartMs": 1324540800000,
+    "startAge": {
+      "years": 5,
+      "months": 11,
+      "days": 27,
+      "hours": 8
+    },
+    "direction": "reverse",
+    "periods": [
+      {
+        "step": 1,
+        "pillar": "丁亥",
+        "jiaziIndex": 23,
+        "startMs": 1324540800000,
+        "endMs": 1640160000000,
+        "startDateTime": "2011-12-22T16:00:00.000+08:00",
+        "endDateTime": "2021-12-22T16:00:00.000+08:00"
+      },
+      {
+        "step": 2,
+        "pillar": "丙戌",
+        "jiaziIndex": 22,
+        "startMs": 1640160000000,
+        "endMs": 1955692800000,
+        "startDateTime": "2021-12-22T16:00:00.000+08:00",
+        "endDateTime": "2031-12-22T16:00:00.000+08:00"
+      },
+      {
+        "step": 3,
+        "pillar": "乙酉",
+        "jiaziIndex": 21,
+        "startMs": 1955692800000,
+        "endMs": 2271312000000,
+        "startDateTime": "2031-12-22T16:00:00.000+08:00",
+        "endDateTime": "2041-12-22T16:00:00.000+08:00"
+      },
+      {
+        "step": 4,
+        "pillar": "甲申",
+        "jiaziIndex": 20,
+        "startMs": 2271312000000,
+        "endMs": 2586844800000,
+        "startDateTime": "2041-12-22T16:00:00.000+08:00",
+        "endDateTime": "2051-12-22T16:00:00.000+08:00"
+      },
+      {
+        "step": 5,
+        "pillar": "癸未",
+        "jiaziIndex": 19,
+        "startMs": 2586844800000,
+        "endMs": 2902464000000,
+        "startDateTime": "2051-12-22T16:00:00.000+08:00",
+        "endDateTime": "2061-12-22T16:00:00.000+08:00"
+      },
+      {
+        "step": 6,
+        "pillar": "壬午",
+        "jiaziIndex": 18,
+        "startMs": 2902464000000,
+        "endMs": 3217996800000,
+        "startDateTime": "2061-12-22T16:00:00.000+08:00",
+        "endDateTime": "2071-12-22T16:00:00.000+08:00"
+      },
+      {
+        "step": 7,
+        "pillar": "辛巳",
+        "jiaziIndex": 17,
+        "startMs": 3217996800000,
+        "endMs": 3533616000000,
+        "startDateTime": "2071-12-22T16:00:00.000+08:00",
+        "endDateTime": "2081-12-22T16:00:00.000+08:00"
+      },
+      {
+        "step": 8,
+        "pillar": "庚辰",
+        "jiaziIndex": 16,
+        "startMs": 3533616000000,
+        "endMs": 3849148800000,
+        "startDateTime": "2081-12-22T16:00:00.000+08:00",
+        "endDateTime": "2091-12-22T16:00:00.000+08:00"
+      },
+      {
+        "step": 9,
+        "pillar": "己卯",
+        "jiaziIndex": 15,
+        "startMs": 3849148800000,
+        "endMs": 4164681600000,
+        "startDateTime": "2091-12-22T16:00:00.000+08:00",
+        "endDateTime": "2101-12-22T16:00:00.000+08:00"
+      },
+      {
+        "step": 10,
+        "pillar": "戊寅",
+        "jiaziIndex": 14,
+        "startMs": 4164681600000,
+        "endMs": 4480214400000,
+        "startDateTime": "2101-12-22T16:00:00.000+08:00",
+        "endDateTime": "2111-12-22T16:00:00.000+08:00"
+      },
+      {
+        "step": 11,
+        "pillar": "丁丑",
+        "jiaziIndex": 13,
+        "startMs": 4480214400000,
+        "endMs": 4795833600000,
+        "startDateTime": "2111-12-22T16:00:00.000+08:00",
+        "endDateTime": "2121-12-22T16:00:00.000+08:00"
+      },
+      {
+        "step": 12,
+        "pillar": "丙子",
+        "jiaziIndex": 12,
+        "startMs": 4795833600000,
+        "endMs": 5111366400000,
+        "startDateTime": "2121-12-22T16:00:00.000+08:00",
+        "endDateTime": "2131-12-22T16:00:00.000+08:00"
+      },
+      {
+        "step": 13,
+        "pillar": "乙亥",
+        "jiaziIndex": 11,
+        "startMs": 5111366400000,
+        "endMs": 5426985600000,
+        "startDateTime": "2131-12-22T16:00:00.000+08:00",
+        "endDateTime": "2141-12-22T16:00:00.000+08:00"
+      },
+      {
+        "step": 14,
+        "pillar": "甲戌",
+        "jiaziIndex": 10,
+        "startMs": 5426985600000,
+        "endMs": 5742518400000,
+        "startDateTime": "2141-12-22T16:00:00.000+08:00",
+        "endDateTime": "2151-12-22T16:00:00.000+08:00"
+      }
+    ]
+  },
+  {
+    "caseId": "T03",
+    "gender": "female",
+    "birthMs": 1135468800000,
+    "birthPillars": [
+      "乙酉",
+      "戊子",
+      "癸未",
+      "丙辰"
+    ],
+    "firstStartMs": 1256328000000,
+    "startAge": {
+      "years": 3,
+      "months": 9,
+      "days": 28,
+      "hours": 20
+    },
+    "direction": "forward",
+    "periods": [
+      {
+        "step": 1,
+        "pillar": "己丑",
+        "jiaziIndex": 25,
+        "startMs": 1256328000000,
+        "endMs": 1571860800000,
+        "startDateTime": "2009-10-24T04:00:00.000+08:00",
+        "endDateTime": "2019-10-24T04:00:00.000+08:00"
+      },
+      {
+        "step": 2,
+        "pillar": "庚寅",
+        "jiaziIndex": 26,
+        "startMs": 1571860800000,
+        "endMs": 1887480000000,
+        "startDateTime": "2019-10-24T04:00:00.000+08:00",
+        "endDateTime": "2029-10-24T04:00:00.000+08:00"
+      },
+      {
+        "step": 3,
+        "pillar": "辛卯",
+        "jiaziIndex": 27,
+        "startMs": 1887480000000,
+        "endMs": 2203012800000,
+        "startDateTime": "2029-10-24T04:00:00.000+08:00",
+        "endDateTime": "2039-10-24T04:00:00.000+08:00"
+      },
+      {
+        "step": 4,
+        "pillar": "壬辰",
+        "jiaziIndex": 28,
+        "startMs": 2203012800000,
+        "endMs": 2518632000000,
+        "startDateTime": "2039-10-24T04:00:00.000+08:00",
+        "endDateTime": "2049-10-24T04:00:00.000+08:00"
+      },
+      {
+        "step": 5,
+        "pillar": "癸巳",
+        "jiaziIndex": 29,
+        "startMs": 2518632000000,
+        "endMs": 2834164800000,
+        "startDateTime": "2049-10-24T04:00:00.000+08:00",
+        "endDateTime": "2059-10-24T04:00:00.000+08:00"
+      },
+      {
+        "step": 6,
+        "pillar": "甲午",
+        "jiaziIndex": 30,
+        "startMs": 2834164800000,
+        "endMs": 3149784000000,
+        "startDateTime": "2059-10-24T04:00:00.000+08:00",
+        "endDateTime": "2069-10-24T04:00:00.000+08:00"
+      },
+      {
+        "step": 7,
+        "pillar": "乙未",
+        "jiaziIndex": 31,
+        "startMs": 3149784000000,
+        "endMs": 3465316800000,
+        "startDateTime": "2069-10-24T04:00:00.000+08:00",
+        "endDateTime": "2079-10-24T04:00:00.000+08:00"
+      },
+      {
+        "step": 8,
+        "pillar": "丙申",
+        "jiaziIndex": 32,
+        "startMs": 3465316800000,
+        "endMs": 3780936000000,
+        "startDateTime": "2079-10-24T04:00:00.000+08:00",
+        "endDateTime": "2089-10-24T04:00:00.000+08:00"
+      },
+      {
+        "step": 9,
+        "pillar": "丁酉",
+        "jiaziIndex": 33,
+        "startMs": 3780936000000,
+        "endMs": 4096468800000,
+        "startDateTime": "2089-10-24T04:00:00.000+08:00",
+        "endDateTime": "2099-10-24T04:00:00.000+08:00"
+      },
+      {
+        "step": 10,
+        "pillar": "戊戌",
+        "jiaziIndex": 34,
+        "startMs": 4096468800000,
+        "endMs": 4412001600000,
+        "startDateTime": "2099-10-24T04:00:00.000+08:00",
+        "endDateTime": "2109-10-24T04:00:00.000+08:00"
+      },
+      {
+        "step": 11,
+        "pillar": "己亥",
+        "jiaziIndex": 35,
+        "startMs": 4412001600000,
+        "endMs": 4727534400000,
+        "startDateTime": "2109-10-24T04:00:00.000+08:00",
+        "endDateTime": "2119-10-24T04:00:00.000+08:00"
+      },
+      {
+        "step": 12,
+        "pillar": "庚子",
+        "jiaziIndex": 36,
+        "startMs": 4727534400000,
+        "endMs": 5043153600000,
+        "startDateTime": "2119-10-24T04:00:00.000+08:00",
+        "endDateTime": "2129-10-24T04:00:00.000+08:00"
+      },
+      {
+        "step": 13,
+        "pillar": "辛丑",
+        "jiaziIndex": 37,
+        "startMs": 5043153600000,
+        "endMs": 5358686400000,
+        "startDateTime": "2129-10-24T04:00:00.000+08:00",
+        "endDateTime": "2139-10-24T04:00:00.000+08:00"
+      },
+      {
+        "step": 14,
+        "pillar": "壬寅",
+        "jiaziIndex": 38,
+        "startMs": 5358686400000,
+        "endMs": 5674305600000,
+        "startDateTime": "2139-10-24T04:00:00.000+08:00",
+        "endDateTime": "2149-10-24T04:00:00.000+08:00"
+      }
+    ]
+  },
+  {
+    "caseId": "T04",
+    "gender": "male",
+    "birthMs": 1208239200000,
+    "birthPillars": [
+      "戊子",
+      "丙辰",
+      "乙酉",
+      "癸未"
+    ],
+    "firstStartMs": 1417348800000,
+    "startAge": {
+      "years": 6,
+      "months": 7,
+      "days": 15,
+      "hours": 6
+    },
+    "direction": "forward",
+    "periods": [
+      {
+        "step": 1,
+        "pillar": "丁巳",
+        "jiaziIndex": 53,
+        "startMs": 1417348800000,
+        "endMs": 1732968000000,
+        "startDateTime": "2014-11-30T20:00:00.000+08:00",
+        "endDateTime": "2024-11-30T20:00:00.000+08:00"
+      },
+      {
+        "step": 2,
+        "pillar": "戊午",
+        "jiaziIndex": 54,
+        "startMs": 1732968000000,
+        "endMs": 2048500800000,
+        "startDateTime": "2024-11-30T20:00:00.000+08:00",
+        "endDateTime": "2034-11-30T20:00:00.000+08:00"
+      },
+      {
+        "step": 3,
+        "pillar": "己未",
+        "jiaziIndex": 55,
+        "startMs": 2048500800000,
+        "endMs": 2364120000000,
+        "startDateTime": "2034-11-30T20:00:00.000+08:00",
+        "endDateTime": "2044-11-30T20:00:00.000+08:00"
+      },
+      {
+        "step": 4,
+        "pillar": "庚申",
+        "jiaziIndex": 56,
+        "startMs": 2364120000000,
+        "endMs": 2679652800000,
+        "startDateTime": "2044-11-30T20:00:00.000+08:00",
+        "endDateTime": "2054-11-30T20:00:00.000+08:00"
+      },
+      {
+        "step": 5,
+        "pillar": "辛酉",
+        "jiaziIndex": 57,
+        "startMs": 2679652800000,
+        "endMs": 2995272000000,
+        "startDateTime": "2054-11-30T20:00:00.000+08:00",
+        "endDateTime": "2064-11-30T20:00:00.000+08:00"
+      },
+      {
+        "step": 6,
+        "pillar": "壬戌",
+        "jiaziIndex": 58,
+        "startMs": 2995272000000,
+        "endMs": 3310804800000,
+        "startDateTime": "2064-11-30T20:00:00.000+08:00",
+        "endDateTime": "2074-11-30T20:00:00.000+08:00"
+      },
+      {
+        "step": 7,
+        "pillar": "癸亥",
+        "jiaziIndex": 59,
+        "startMs": 3310804800000,
+        "endMs": 3626424000000,
+        "startDateTime": "2074-11-30T20:00:00.000+08:00",
+        "endDateTime": "2084-11-30T20:00:00.000+08:00"
+      },
+      {
+        "step": 8,
+        "pillar": "甲子",
+        "jiaziIndex": 0,
+        "startMs": 3626424000000,
+        "endMs": 3941956800000,
+        "startDateTime": "2084-11-30T20:00:00.000+08:00",
+        "endDateTime": "2094-11-30T20:00:00.000+08:00"
+      },
+      {
+        "step": 9,
+        "pillar": "乙丑",
+        "jiaziIndex": 1,
+        "startMs": 3941956800000,
+        "endMs": 4257489600000,
+        "startDateTime": "2094-11-30T20:00:00.000+08:00",
+        "endDateTime": "2104-11-30T20:00:00.000+08:00"
+      },
+      {
+        "step": 10,
+        "pillar": "丙寅",
+        "jiaziIndex": 2,
+        "startMs": 4257489600000,
+        "endMs": 4573022400000,
+        "startDateTime": "2104-11-30T20:00:00.000+08:00",
+        "endDateTime": "2114-11-30T20:00:00.000+08:00"
+      },
+      {
+        "step": 11,
+        "pillar": "丁卯",
+        "jiaziIndex": 3,
+        "startMs": 4573022400000,
+        "endMs": 4888641600000,
+        "startDateTime": "2114-11-30T20:00:00.000+08:00",
+        "endDateTime": "2124-11-30T20:00:00.000+08:00"
+      },
+      {
+        "step": 12,
+        "pillar": "戊辰",
+        "jiaziIndex": 4,
+        "startMs": 4888641600000,
+        "endMs": 5204174400000,
+        "startDateTime": "2124-11-30T20:00:00.000+08:00",
+        "endDateTime": "2134-11-30T20:00:00.000+08:00"
+      },
+      {
+        "step": 13,
+        "pillar": "己巳",
+        "jiaziIndex": 5,
+        "startMs": 5204174400000,
+        "endMs": 5519793600000,
+        "startDateTime": "2134-11-30T20:00:00.000+08:00",
+        "endDateTime": "2144-11-30T20:00:00.000+08:00"
+      },
+      {
+        "step": 14,
+        "pillar": "庚午",
+        "jiaziIndex": 6,
+        "startMs": 5519793600000,
+        "endMs": 5835326400000,
+        "startDateTime": "2144-11-30T20:00:00.000+08:00",
+        "endDateTime": "2154-11-30T20:00:00.000+08:00"
+      }
+    ]
+  },
+  {
+    "caseId": "T04",
+    "gender": "female",
+    "birthMs": 1208239200000,
+    "birthPillars": [
+      "戊子",
+      "丙辰",
+      "乙酉",
+      "癸未"
+    ],
+    "firstStartMs": 1322308800000,
+    "startAge": {
+      "years": 3,
+      "months": 7,
+      "days": 11,
+      "hours": 6
+    },
+    "direction": "reverse",
+    "periods": [
+      {
+        "step": 1,
+        "pillar": "乙卯",
+        "jiaziIndex": 51,
+        "startMs": 1322308800000,
+        "endMs": 1637928000000,
+        "startDateTime": "2011-11-26T20:00:00.000+08:00",
+        "endDateTime": "2021-11-26T20:00:00.000+08:00"
+      },
+      {
+        "step": 2,
+        "pillar": "甲寅",
+        "jiaziIndex": 50,
+        "startMs": 1637928000000,
+        "endMs": 1953460800000,
+        "startDateTime": "2021-11-26T20:00:00.000+08:00",
+        "endDateTime": "2031-11-26T20:00:00.000+08:00"
+      },
+      {
+        "step": 3,
+        "pillar": "癸丑",
+        "jiaziIndex": 49,
+        "startMs": 1953460800000,
+        "endMs": 2269080000000,
+        "startDateTime": "2031-11-26T20:00:00.000+08:00",
+        "endDateTime": "2041-11-26T20:00:00.000+08:00"
+      },
+      {
+        "step": 4,
+        "pillar": "壬子",
+        "jiaziIndex": 48,
+        "startMs": 2269080000000,
+        "endMs": 2584612800000,
+        "startDateTime": "2041-11-26T20:00:00.000+08:00",
+        "endDateTime": "2051-11-26T20:00:00.000+08:00"
+      },
+      {
+        "step": 5,
+        "pillar": "辛亥",
+        "jiaziIndex": 47,
+        "startMs": 2584612800000,
+        "endMs": 2900232000000,
+        "startDateTime": "2051-11-26T20:00:00.000+08:00",
+        "endDateTime": "2061-11-26T20:00:00.000+08:00"
+      },
+      {
+        "step": 6,
+        "pillar": "庚戌",
+        "jiaziIndex": 46,
+        "startMs": 2900232000000,
+        "endMs": 3215764800000,
+        "startDateTime": "2061-11-26T20:00:00.000+08:00",
+        "endDateTime": "2071-11-26T20:00:00.000+08:00"
+      },
+      {
+        "step": 7,
+        "pillar": "己酉",
+        "jiaziIndex": 45,
+        "startMs": 3215764800000,
+        "endMs": 3531384000000,
+        "startDateTime": "2071-11-26T20:00:00.000+08:00",
+        "endDateTime": "2081-11-26T20:00:00.000+08:00"
+      },
+      {
+        "step": 8,
+        "pillar": "戊申",
+        "jiaziIndex": 44,
+        "startMs": 3531384000000,
+        "endMs": 3846916800000,
+        "startDateTime": "2081-11-26T20:00:00.000+08:00",
+        "endDateTime": "2091-11-26T20:00:00.000+08:00"
+      },
+      {
+        "step": 9,
+        "pillar": "丁未",
+        "jiaziIndex": 43,
+        "startMs": 3846916800000,
+        "endMs": 4162449600000,
+        "startDateTime": "2091-11-26T20:00:00.000+08:00",
+        "endDateTime": "2101-11-26T20:00:00.000+08:00"
+      },
+      {
+        "step": 10,
+        "pillar": "丙午",
+        "jiaziIndex": 42,
+        "startMs": 4162449600000,
+        "endMs": 4477982400000,
+        "startDateTime": "2101-11-26T20:00:00.000+08:00",
+        "endDateTime": "2111-11-26T20:00:00.000+08:00"
+      },
+      {
+        "step": 11,
+        "pillar": "乙巳",
+        "jiaziIndex": 41,
+        "startMs": 4477982400000,
+        "endMs": 4793601600000,
+        "startDateTime": "2111-11-26T20:00:00.000+08:00",
+        "endDateTime": "2121-11-26T20:00:00.000+08:00"
+      },
+      {
+        "step": 12,
+        "pillar": "甲辰",
+        "jiaziIndex": 40,
+        "startMs": 4793601600000,
+        "endMs": 5109134400000,
+        "startDateTime": "2121-11-26T20:00:00.000+08:00",
+        "endDateTime": "2131-11-26T20:00:00.000+08:00"
+      },
+      {
+        "step": 13,
+        "pillar": "癸卯",
+        "jiaziIndex": 39,
+        "startMs": 5109134400000,
+        "endMs": 5424753600000,
+        "startDateTime": "2131-11-26T20:00:00.000+08:00",
+        "endDateTime": "2141-11-26T20:00:00.000+08:00"
+      },
+      {
+        "step": 14,
+        "pillar": "壬寅",
+        "jiaziIndex": 38,
+        "startMs": 5424753600000,
+        "endMs": 5740286400000,
+        "startDateTime": "2141-11-26T20:00:00.000+08:00",
+        "endDateTime": "2151-11-26T20:00:00.000+08:00"
+      }
+    ]
+  },
+  {
+    "caseId": "T05",
+    "gender": "male",
+    "birthMs": 556934400000,
+    "birthPillars": [
+      "丁卯",
+      "戊申",
+      "丁未",
+      "甲辰"
+    ],
+    "firstStartMs": 745596000000,
+    "startAge": {
+      "years": 5,
+      "months": 11,
+      "days": 22,
+      "hours": 14
+    },
+    "direction": "reverse",
+    "periods": [
+      {
+        "step": 1,
+        "pillar": "丁未",
+        "jiaziIndex": 43,
+        "startMs": 745596000000,
+        "endMs": 1061128800000,
+        "startDateTime": "1993-08-17T22:00:00.000+08:00",
+        "endDateTime": "2003-08-17T22:00:00.000+08:00"
+      },
+      {
+        "step": 2,
+        "pillar": "丙午",
+        "jiaziIndex": 42,
+        "startMs": 1061128800000,
+        "endMs": 1376748000000,
+        "startDateTime": "2003-08-17T22:00:00.000+08:00",
+        "endDateTime": "2013-08-17T22:00:00.000+08:00"
+      },
+      {
+        "step": 3,
+        "pillar": "乙巳",
+        "jiaziIndex": 41,
+        "startMs": 1376748000000,
+        "endMs": 1692280800000,
+        "startDateTime": "2013-08-17T22:00:00.000+08:00",
+        "endDateTime": "2023-08-17T22:00:00.000+08:00"
+      },
+      {
+        "step": 4,
+        "pillar": "甲辰",
+        "jiaziIndex": 40,
+        "startMs": 1692280800000,
+        "endMs": 2007900000000,
+        "startDateTime": "2023-08-17T22:00:00.000+08:00",
+        "endDateTime": "2033-08-17T22:00:00.000+08:00"
+      },
+      {
+        "step": 5,
+        "pillar": "癸卯",
+        "jiaziIndex": 39,
+        "startMs": 2007900000000,
+        "endMs": 2323432800000,
+        "startDateTime": "2033-08-17T22:00:00.000+08:00",
+        "endDateTime": "2043-08-17T22:00:00.000+08:00"
+      },
+      {
+        "step": 6,
+        "pillar": "壬寅",
+        "jiaziIndex": 38,
+        "startMs": 2323432800000,
+        "endMs": 2639052000000,
+        "startDateTime": "2043-08-17T22:00:00.000+08:00",
+        "endDateTime": "2053-08-17T22:00:00.000+08:00"
+      },
+      {
+        "step": 7,
+        "pillar": "辛丑",
+        "jiaziIndex": 37,
+        "startMs": 2639052000000,
+        "endMs": 2954584800000,
+        "startDateTime": "2053-08-17T22:00:00.000+08:00",
+        "endDateTime": "2063-08-17T22:00:00.000+08:00"
+      },
+      {
+        "step": 8,
+        "pillar": "庚子",
+        "jiaziIndex": 36,
+        "startMs": 2954584800000,
+        "endMs": 3270204000000,
+        "startDateTime": "2063-08-17T22:00:00.000+08:00",
+        "endDateTime": "2073-08-17T22:00:00.000+08:00"
+      },
+      {
+        "step": 9,
+        "pillar": "己亥",
+        "jiaziIndex": 35,
+        "startMs": 3270204000000,
+        "endMs": 3585736800000,
+        "startDateTime": "2073-08-17T22:00:00.000+08:00",
+        "endDateTime": "2083-08-17T22:00:00.000+08:00"
+      },
+      {
+        "step": 10,
+        "pillar": "戊戌",
+        "jiaziIndex": 34,
+        "startMs": 3585736800000,
+        "endMs": 3901356000000,
+        "startDateTime": "2083-08-17T22:00:00.000+08:00",
+        "endDateTime": "2093-08-17T22:00:00.000+08:00"
+      },
+      {
+        "step": 11,
+        "pillar": "丁酉",
+        "jiaziIndex": 33,
+        "startMs": 3901356000000,
+        "endMs": 4216802400000,
+        "startDateTime": "2093-08-17T22:00:00.000+08:00",
+        "endDateTime": "2103-08-17T22:00:00.000+08:00"
+      },
+      {
+        "step": 12,
+        "pillar": "丙申",
+        "jiaziIndex": 32,
+        "startMs": 4216802400000,
+        "endMs": 4532421600000,
+        "startDateTime": "2103-08-17T22:00:00.000+08:00",
+        "endDateTime": "2113-08-17T22:00:00.000+08:00"
+      },
+      {
+        "step": 13,
+        "pillar": "乙未",
+        "jiaziIndex": 31,
+        "startMs": 4532421600000,
+        "endMs": 4847954400000,
+        "startDateTime": "2113-08-17T22:00:00.000+08:00",
+        "endDateTime": "2123-08-17T22:00:00.000+08:00"
+      },
+      {
+        "step": 14,
+        "pillar": "甲午",
+        "jiaziIndex": 30,
+        "startMs": 4847954400000,
+        "endMs": 5163573600000,
+        "startDateTime": "2123-08-17T22:00:00.000+08:00",
+        "endDateTime": "2133-08-17T22:00:00.000+08:00"
+      }
+    ]
+  },
+  {
+    "caseId": "T05",
+    "gender": "female",
+    "birthMs": 556934400000,
+    "birthPillars": [
+      "丁卯",
+      "戊申",
+      "丁未",
+      "甲辰"
+    ],
+    "firstStartMs": 695606400000,
+    "startAge": {
+      "years": 4,
+      "months": 4,
+      "days": 22,
+      "hours": 0
+    },
+    "direction": "forward",
+    "periods": [
+      {
+        "step": 1,
+        "pillar": "己酉",
+        "jiaziIndex": 45,
+        "startMs": 695606400000,
+        "endMs": 1011225600000,
+        "startDateTime": "1992-01-17T08:00:00.000+08:00",
+        "endDateTime": "2002-01-17T08:00:00.000+08:00"
+      },
+      {
+        "step": 2,
+        "pillar": "庚戌",
+        "jiaziIndex": 46,
+        "startMs": 1011225600000,
+        "endMs": 1326758400000,
+        "startDateTime": "2002-01-17T08:00:00.000+08:00",
+        "endDateTime": "2012-01-17T08:00:00.000+08:00"
+      },
+      {
+        "step": 3,
+        "pillar": "辛亥",
+        "jiaziIndex": 47,
+        "startMs": 1326758400000,
+        "endMs": 1642377600000,
+        "startDateTime": "2012-01-17T08:00:00.000+08:00",
+        "endDateTime": "2022-01-17T08:00:00.000+08:00"
+      },
+      {
+        "step": 4,
+        "pillar": "壬子",
+        "jiaziIndex": 48,
+        "startMs": 1642377600000,
+        "endMs": 1957910400000,
+        "startDateTime": "2022-01-17T08:00:00.000+08:00",
+        "endDateTime": "2032-01-17T08:00:00.000+08:00"
+      },
+      {
+        "step": 5,
+        "pillar": "癸丑",
+        "jiaziIndex": 49,
+        "startMs": 1957910400000,
+        "endMs": 2273529600000,
+        "startDateTime": "2032-01-17T08:00:00.000+08:00",
+        "endDateTime": "2042-01-17T08:00:00.000+08:00"
+      },
+      {
+        "step": 6,
+        "pillar": "甲寅",
+        "jiaziIndex": 50,
+        "startMs": 2273529600000,
+        "endMs": 2589062400000,
+        "startDateTime": "2042-01-17T08:00:00.000+08:00",
+        "endDateTime": "2052-01-17T08:00:00.000+08:00"
+      },
+      {
+        "step": 7,
+        "pillar": "乙卯",
+        "jiaziIndex": 51,
+        "startMs": 2589062400000,
+        "endMs": 2904681600000,
+        "startDateTime": "2052-01-17T08:00:00.000+08:00",
+        "endDateTime": "2062-01-17T08:00:00.000+08:00"
+      },
+      {
+        "step": 8,
+        "pillar": "丙辰",
+        "jiaziIndex": 52,
+        "startMs": 2904681600000,
+        "endMs": 3220214400000,
+        "startDateTime": "2062-01-17T08:00:00.000+08:00",
+        "endDateTime": "2072-01-17T08:00:00.000+08:00"
+      },
+      {
+        "step": 9,
+        "pillar": "丁巳",
+        "jiaziIndex": 53,
+        "startMs": 3220214400000,
+        "endMs": 3535833600000,
+        "startDateTime": "2072-01-17T08:00:00.000+08:00",
+        "endDateTime": "2082-01-17T08:00:00.000+08:00"
+      },
+      {
+        "step": 10,
+        "pillar": "戊午",
+        "jiaziIndex": 54,
+        "startMs": 3535833600000,
+        "endMs": 3851366400000,
+        "startDateTime": "2082-01-17T08:00:00.000+08:00",
+        "endDateTime": "2092-01-17T08:00:00.000+08:00"
+      },
+      {
+        "step": 11,
+        "pillar": "己未",
+        "jiaziIndex": 55,
+        "startMs": 3851366400000,
+        "endMs": 4166899200000,
+        "startDateTime": "2092-01-17T08:00:00.000+08:00",
+        "endDateTime": "2102-01-17T08:00:00.000+08:00"
+      },
+      {
+        "step": 12,
+        "pillar": "庚申",
+        "jiaziIndex": 56,
+        "startMs": 4166899200000,
+        "endMs": 4482432000000,
+        "startDateTime": "2102-01-17T08:00:00.000+08:00",
+        "endDateTime": "2112-01-17T08:00:00.000+08:00"
+      },
+      {
+        "step": 13,
+        "pillar": "辛酉",
+        "jiaziIndex": 57,
+        "startMs": 4482432000000,
+        "endMs": 4798051200000,
+        "startDateTime": "2112-01-17T08:00:00.000+08:00",
+        "endDateTime": "2122-01-17T08:00:00.000+08:00"
+      },
+      {
+        "step": 14,
+        "pillar": "壬戌",
+        "jiaziIndex": 58,
+        "startMs": 4798051200000,
+        "endMs": 5113584000000,
+        "startDateTime": "2122-01-17T08:00:00.000+08:00",
+        "endDateTime": "2132-01-17T08:00:00.000+08:00"
+      }
+    ]
+  },
+  {
+    "caseId": "T06",
+    "gender": "male",
+    "birthMs": 575892000000,
+    "birthPillars": [
+      "戊辰",
+      "乙卯",
+      "丙戌",
+      "丁酉"
+    ],
+    "firstStartMs": 609004800000,
+    "startAge": {
+      "years": 1,
+      "months": 0,
+      "days": 18,
+      "hours": 6
+    },
+    "direction": "forward",
+    "periods": [
+      {
+        "step": 1,
+        "pillar": "丙辰",
+        "jiaziIndex": 52,
+        "startMs": 609004800000,
+        "endMs": 924537600000,
+        "startDateTime": "1989-04-20T00:00:00.000+08:00",
+        "endDateTime": "1999-04-20T00:00:00.000+08:00"
+      },
+      {
+        "step": 2,
+        "pillar": "丁巳",
+        "jiaziIndex": 53,
+        "startMs": 924537600000,
+        "endMs": 1240156800000,
+        "startDateTime": "1999-04-20T00:00:00.000+08:00",
+        "endDateTime": "2009-04-20T00:00:00.000+08:00"
+      },
+      {
+        "step": 3,
+        "pillar": "戊午",
+        "jiaziIndex": 54,
+        "startMs": 1240156800000,
+        "endMs": 1555689600000,
+        "startDateTime": "2009-04-20T00:00:00.000+08:00",
+        "endDateTime": "2019-04-20T00:00:00.000+08:00"
+      },
+      {
+        "step": 4,
+        "pillar": "己未",
+        "jiaziIndex": 55,
+        "startMs": 1555689600000,
+        "endMs": 1871308800000,
+        "startDateTime": "2019-04-20T00:00:00.000+08:00",
+        "endDateTime": "2029-04-20T00:00:00.000+08:00"
+      },
+      {
+        "step": 5,
+        "pillar": "庚申",
+        "jiaziIndex": 56,
+        "startMs": 1871308800000,
+        "endMs": 2186841600000,
+        "startDateTime": "2029-04-20T00:00:00.000+08:00",
+        "endDateTime": "2039-04-20T00:00:00.000+08:00"
+      },
+      {
+        "step": 6,
+        "pillar": "辛酉",
+        "jiaziIndex": 57,
+        "startMs": 2186841600000,
+        "endMs": 2502460800000,
+        "startDateTime": "2039-04-20T00:00:00.000+08:00",
+        "endDateTime": "2049-04-20T00:00:00.000+08:00"
+      },
+      {
+        "step": 7,
+        "pillar": "壬戌",
+        "jiaziIndex": 58,
+        "startMs": 2502460800000,
+        "endMs": 2817993600000,
+        "startDateTime": "2049-04-20T00:00:00.000+08:00",
+        "endDateTime": "2059-04-20T00:00:00.000+08:00"
+      },
+      {
+        "step": 8,
+        "pillar": "癸亥",
+        "jiaziIndex": 59,
+        "startMs": 2817993600000,
+        "endMs": 3133612800000,
+        "startDateTime": "2059-04-20T00:00:00.000+08:00",
+        "endDateTime": "2069-04-20T00:00:00.000+08:00"
+      },
+      {
+        "step": 9,
+        "pillar": "甲子",
+        "jiaziIndex": 0,
+        "startMs": 3133612800000,
+        "endMs": 3449145600000,
+        "startDateTime": "2069-04-20T00:00:00.000+08:00",
+        "endDateTime": "2079-04-20T00:00:00.000+08:00"
+      },
+      {
+        "step": 10,
+        "pillar": "乙丑",
+        "jiaziIndex": 1,
+        "startMs": 3449145600000,
+        "endMs": 3764764800000,
+        "startDateTime": "2079-04-20T00:00:00.000+08:00",
+        "endDateTime": "2089-04-20T00:00:00.000+08:00"
+      },
+      {
+        "step": 11,
+        "pillar": "丙寅",
+        "jiaziIndex": 2,
+        "startMs": 3764764800000,
+        "endMs": 4080297600000,
+        "startDateTime": "2089-04-20T00:00:00.000+08:00",
+        "endDateTime": "2099-04-20T00:00:00.000+08:00"
+      },
+      {
+        "step": 12,
+        "pillar": "丁卯",
+        "jiaziIndex": 3,
+        "startMs": 4080297600000,
+        "endMs": 4395830400000,
+        "startDateTime": "2099-04-20T00:00:00.000+08:00",
+        "endDateTime": "2109-04-20T00:00:00.000+08:00"
+      },
+      {
+        "step": 13,
+        "pillar": "戊辰",
+        "jiaziIndex": 4,
+        "startMs": 4395830400000,
+        "endMs": 4711363200000,
+        "startDateTime": "2109-04-20T00:00:00.000+08:00",
+        "endDateTime": "2119-04-20T00:00:00.000+08:00"
+      },
+      {
+        "step": 14,
+        "pillar": "己巳",
+        "jiaziIndex": 5,
+        "startMs": 4711363200000,
+        "endMs": 5026982400000,
+        "startDateTime": "2119-04-20T00:00:00.000+08:00",
+        "endDateTime": "2129-04-20T00:00:00.000+08:00"
+      }
+    ]
+  },
+  {
+    "caseId": "T06",
+    "gender": "female",
+    "birthMs": 575892000000,
+    "birthPillars": [
+      "戊辰",
+      "乙卯",
+      "丙戌",
+      "丁酉"
+    ],
+    "firstStartMs": 860421600000,
+    "startAge": {
+      "years": 9,
+      "months": 0,
+      "days": 6,
+      "hours": 4
+    },
+    "direction": "reverse",
+    "periods": [
+      {
+        "step": 1,
+        "pillar": "甲寅",
+        "jiaziIndex": 50,
+        "startMs": 860421600000,
+        "endMs": 1175954400000,
+        "startDateTime": "1997-04-07T22:00:00.000+08:00",
+        "endDateTime": "2007-04-07T22:00:00.000+08:00"
+      },
+      {
+        "step": 2,
+        "pillar": "癸丑",
+        "jiaziIndex": 49,
+        "startMs": 1175954400000,
+        "endMs": 1491573600000,
+        "startDateTime": "2007-04-07T22:00:00.000+08:00",
+        "endDateTime": "2017-04-07T22:00:00.000+08:00"
+      },
+      {
+        "step": 3,
+        "pillar": "壬子",
+        "jiaziIndex": 48,
+        "startMs": 1491573600000,
+        "endMs": 1807106400000,
+        "startDateTime": "2017-04-07T22:00:00.000+08:00",
+        "endDateTime": "2027-04-07T22:00:00.000+08:00"
+      },
+      {
+        "step": 4,
+        "pillar": "辛亥",
+        "jiaziIndex": 47,
+        "startMs": 1807106400000,
+        "endMs": 2122725600000,
+        "startDateTime": "2027-04-07T22:00:00.000+08:00",
+        "endDateTime": "2037-04-07T22:00:00.000+08:00"
+      },
+      {
+        "step": 5,
+        "pillar": "庚戌",
+        "jiaziIndex": 46,
+        "startMs": 2122725600000,
+        "endMs": 2438258400000,
+        "startDateTime": "2037-04-07T22:00:00.000+08:00",
+        "endDateTime": "2047-04-07T22:00:00.000+08:00"
+      },
+      {
+        "step": 6,
+        "pillar": "己酉",
+        "jiaziIndex": 45,
+        "startMs": 2438258400000,
+        "endMs": 2753877600000,
+        "startDateTime": "2047-04-07T22:00:00.000+08:00",
+        "endDateTime": "2057-04-07T22:00:00.000+08:00"
+      },
+      {
+        "step": 7,
+        "pillar": "戊申",
+        "jiaziIndex": 44,
+        "startMs": 2753877600000,
+        "endMs": 3069410400000,
+        "startDateTime": "2057-04-07T22:00:00.000+08:00",
+        "endDateTime": "2067-04-07T22:00:00.000+08:00"
+      },
+      {
+        "step": 8,
+        "pillar": "丁未",
+        "jiaziIndex": 43,
+        "startMs": 3069410400000,
+        "endMs": 3385029600000,
+        "startDateTime": "2067-04-07T22:00:00.000+08:00",
+        "endDateTime": "2077-04-07T22:00:00.000+08:00"
+      },
+      {
+        "step": 9,
+        "pillar": "丙午",
+        "jiaziIndex": 42,
+        "startMs": 3385029600000,
+        "endMs": 3700562400000,
+        "startDateTime": "2077-04-07T22:00:00.000+08:00",
+        "endDateTime": "2087-04-07T22:00:00.000+08:00"
+      },
+      {
+        "step": 10,
+        "pillar": "乙巳",
+        "jiaziIndex": 41,
+        "startMs": 3700562400000,
+        "endMs": 4016181600000,
+        "startDateTime": "2087-04-07T22:00:00.000+08:00",
+        "endDateTime": "2097-04-07T22:00:00.000+08:00"
+      },
+      {
+        "step": 11,
+        "pillar": "甲辰",
+        "jiaziIndex": 40,
+        "startMs": 4016181600000,
+        "endMs": 4331628000000,
+        "startDateTime": "2097-04-07T22:00:00.000+08:00",
+        "endDateTime": "2107-04-07T22:00:00.000+08:00"
+      },
+      {
+        "step": 12,
+        "pillar": "癸卯",
+        "jiaziIndex": 39,
+        "startMs": 4331628000000,
+        "endMs": 4647247200000,
+        "startDateTime": "2107-04-07T22:00:00.000+08:00",
+        "endDateTime": "2117-04-07T22:00:00.000+08:00"
+      },
+      {
+        "step": 13,
+        "pillar": "壬寅",
+        "jiaziIndex": 38,
+        "startMs": 4647247200000,
+        "endMs": 4962780000000,
+        "startDateTime": "2117-04-07T22:00:00.000+08:00",
+        "endDateTime": "2127-04-07T22:00:00.000+08:00"
+      },
+      {
+        "step": 14,
+        "pillar": "辛丑",
+        "jiaziIndex": 37,
+        "startMs": 4962780000000,
+        "endMs": 5278399200000,
+        "startDateTime": "2127-04-07T22:00:00.000+08:00",
+        "endDateTime": "2137-04-07T22:00:00.000+08:00"
+      }
+    ]
+  },
+  {
+    "caseId": "T07",
+    "gender": "male",
+    "birthMs": 501105600000,
+    "birthPillars": [
+      "乙丑",
+      "丁亥",
+      "辛酉",
+      "庚寅"
+    ],
+    "firstStartMs": 609933600000,
+    "startAge": {
+      "years": 3,
+      "months": 5,
+      "days": 12,
+      "hours": 14
+    },
+    "direction": "reverse",
+    "periods": [
+      {
+        "step": 1,
+        "pillar": "丙戌",
+        "jiaziIndex": 22,
+        "startMs": 609933600000,
+        "endMs": 925466400000,
+        "startDateTime": "1989-04-30T18:00:00.000+08:00",
+        "endDateTime": "1999-04-30T18:00:00.000+08:00"
+      },
+      {
+        "step": 2,
+        "pillar": "乙酉",
+        "jiaziIndex": 21,
+        "startMs": 925466400000,
+        "endMs": 1241085600000,
+        "startDateTime": "1999-04-30T18:00:00.000+08:00",
+        "endDateTime": "2009-04-30T18:00:00.000+08:00"
+      },
+      {
+        "step": 3,
+        "pillar": "甲申",
+        "jiaziIndex": 20,
+        "startMs": 1241085600000,
+        "endMs": 1556618400000,
+        "startDateTime": "2009-04-30T18:00:00.000+08:00",
+        "endDateTime": "2019-04-30T18:00:00.000+08:00"
+      },
+      {
+        "step": 4,
+        "pillar": "癸未",
+        "jiaziIndex": 19,
+        "startMs": 1556618400000,
+        "endMs": 1872237600000,
+        "startDateTime": "2019-04-30T18:00:00.000+08:00",
+        "endDateTime": "2029-04-30T18:00:00.000+08:00"
+      },
+      {
+        "step": 5,
+        "pillar": "壬午",
+        "jiaziIndex": 18,
+        "startMs": 1872237600000,
+        "endMs": 2187770400000,
+        "startDateTime": "2029-04-30T18:00:00.000+08:00",
+        "endDateTime": "2039-04-30T18:00:00.000+08:00"
+      },
+      {
+        "step": 6,
+        "pillar": "辛巳",
+        "jiaziIndex": 17,
+        "startMs": 2187770400000,
+        "endMs": 2503389600000,
+        "startDateTime": "2039-04-30T18:00:00.000+08:00",
+        "endDateTime": "2049-04-30T18:00:00.000+08:00"
+      },
+      {
+        "step": 7,
+        "pillar": "庚辰",
+        "jiaziIndex": 16,
+        "startMs": 2503389600000,
+        "endMs": 2818922400000,
+        "startDateTime": "2049-04-30T18:00:00.000+08:00",
+        "endDateTime": "2059-04-30T18:00:00.000+08:00"
+      },
+      {
+        "step": 8,
+        "pillar": "己卯",
+        "jiaziIndex": 15,
+        "startMs": 2818922400000,
+        "endMs": 3134541600000,
+        "startDateTime": "2059-04-30T18:00:00.000+08:00",
+        "endDateTime": "2069-04-30T18:00:00.000+08:00"
+      },
+      {
+        "step": 9,
+        "pillar": "戊寅",
+        "jiaziIndex": 14,
+        "startMs": 3134541600000,
+        "endMs": 3450074400000,
+        "startDateTime": "2069-04-30T18:00:00.000+08:00",
+        "endDateTime": "2079-04-30T18:00:00.000+08:00"
+      },
+      {
+        "step": 10,
+        "pillar": "丁丑",
+        "jiaziIndex": 13,
+        "startMs": 3450074400000,
+        "endMs": 3765693600000,
+        "startDateTime": "2079-04-30T18:00:00.000+08:00",
+        "endDateTime": "2089-04-30T18:00:00.000+08:00"
+      },
+      {
+        "step": 11,
+        "pillar": "丙子",
+        "jiaziIndex": 12,
+        "startMs": 3765693600000,
+        "endMs": 4081226400000,
+        "startDateTime": "2089-04-30T18:00:00.000+08:00",
+        "endDateTime": "2099-04-30T18:00:00.000+08:00"
+      },
+      {
+        "step": 12,
+        "pillar": "乙亥",
+        "jiaziIndex": 11,
+        "startMs": 4081226400000,
+        "endMs": 4396759200000,
+        "startDateTime": "2099-04-30T18:00:00.000+08:00",
+        "endDateTime": "2109-04-30T18:00:00.000+08:00"
+      },
+      {
+        "step": 13,
+        "pillar": "甲戌",
+        "jiaziIndex": 10,
+        "startMs": 4396759200000,
+        "endMs": 4712292000000,
+        "startDateTime": "2109-04-30T18:00:00.000+08:00",
+        "endDateTime": "2119-04-30T18:00:00.000+08:00"
+      },
+      {
+        "step": 14,
+        "pillar": "癸酉",
+        "jiaziIndex": 9,
+        "startMs": 4712292000000,
+        "endMs": 5027911200000,
+        "startDateTime": "2119-04-30T18:00:00.000+08:00",
+        "endDateTime": "2129-04-30T18:00:00.000+08:00"
+      }
+    ]
+  },
+  {
+    "caseId": "T07",
+    "gender": "female",
+    "birthMs": 501105600000,
+    "birthPillars": [
+      "乙丑",
+      "丁亥",
+      "辛酉",
+      "庚寅"
+    ],
+    "firstStartMs": 704520000000,
+    "startAge": {
+      "years": 6,
+      "months": 5,
+      "days": 11,
+      "hours": 8
+    },
+    "direction": "forward",
+    "periods": [
+      {
+        "step": 1,
+        "pillar": "戊子",
+        "jiaziIndex": 24,
+        "startMs": 704520000000,
+        "endMs": 1020052800000,
+        "startDateTime": "1992-04-29T12:00:00.000+08:00",
+        "endDateTime": "2002-04-29T12:00:00.000+08:00"
+      },
+      {
+        "step": 2,
+        "pillar": "己丑",
+        "jiaziIndex": 25,
+        "startMs": 1020052800000,
+        "endMs": 1335672000000,
+        "startDateTime": "2002-04-29T12:00:00.000+08:00",
+        "endDateTime": "2012-04-29T12:00:00.000+08:00"
+      },
+      {
+        "step": 3,
+        "pillar": "庚寅",
+        "jiaziIndex": 26,
+        "startMs": 1335672000000,
+        "endMs": 1651204800000,
+        "startDateTime": "2012-04-29T12:00:00.000+08:00",
+        "endDateTime": "2022-04-29T12:00:00.000+08:00"
+      },
+      {
+        "step": 4,
+        "pillar": "辛卯",
+        "jiaziIndex": 27,
+        "startMs": 1651204800000,
+        "endMs": 1966824000000,
+        "startDateTime": "2022-04-29T12:00:00.000+08:00",
+        "endDateTime": "2032-04-29T12:00:00.000+08:00"
+      },
+      {
+        "step": 5,
+        "pillar": "壬辰",
+        "jiaziIndex": 28,
+        "startMs": 1966824000000,
+        "endMs": 2282356800000,
+        "startDateTime": "2032-04-29T12:00:00.000+08:00",
+        "endDateTime": "2042-04-29T12:00:00.000+08:00"
+      },
+      {
+        "step": 6,
+        "pillar": "癸巳",
+        "jiaziIndex": 29,
+        "startMs": 2282356800000,
+        "endMs": 2597976000000,
+        "startDateTime": "2042-04-29T12:00:00.000+08:00",
+        "endDateTime": "2052-04-29T12:00:00.000+08:00"
+      },
+      {
+        "step": 7,
+        "pillar": "甲午",
+        "jiaziIndex": 30,
+        "startMs": 2597976000000,
+        "endMs": 2913508800000,
+        "startDateTime": "2052-04-29T12:00:00.000+08:00",
+        "endDateTime": "2062-04-29T12:00:00.000+08:00"
+      },
+      {
+        "step": 8,
+        "pillar": "乙未",
+        "jiaziIndex": 31,
+        "startMs": 2913508800000,
+        "endMs": 3229128000000,
+        "startDateTime": "2062-04-29T12:00:00.000+08:00",
+        "endDateTime": "2072-04-29T12:00:00.000+08:00"
+      },
+      {
+        "step": 9,
+        "pillar": "丙申",
+        "jiaziIndex": 32,
+        "startMs": 3229128000000,
+        "endMs": 3544660800000,
+        "startDateTime": "2072-04-29T12:00:00.000+08:00",
+        "endDateTime": "2082-04-29T12:00:00.000+08:00"
+      },
+      {
+        "step": 10,
+        "pillar": "丁酉",
+        "jiaziIndex": 33,
+        "startMs": 3544660800000,
+        "endMs": 3860280000000,
+        "startDateTime": "2082-04-29T12:00:00.000+08:00",
+        "endDateTime": "2092-04-29T12:00:00.000+08:00"
+      },
+      {
+        "step": 11,
+        "pillar": "戊戌",
+        "jiaziIndex": 34,
+        "startMs": 3860280000000,
+        "endMs": 4175726400000,
+        "startDateTime": "2092-04-29T12:00:00.000+08:00",
+        "endDateTime": "2102-04-29T12:00:00.000+08:00"
+      },
+      {
+        "step": 12,
+        "pillar": "己亥",
+        "jiaziIndex": 35,
+        "startMs": 4175726400000,
+        "endMs": 4491345600000,
+        "startDateTime": "2102-04-29T12:00:00.000+08:00",
+        "endDateTime": "2112-04-29T12:00:00.000+08:00"
+      },
+      {
+        "step": 13,
+        "pillar": "庚子",
+        "jiaziIndex": 36,
+        "startMs": 4491345600000,
+        "endMs": 4806878400000,
+        "startDateTime": "2112-04-29T12:00:00.000+08:00",
+        "endDateTime": "2122-04-29T12:00:00.000+08:00"
+      },
+      {
+        "step": 14,
+        "pillar": "辛丑",
+        "jiaziIndex": 37,
+        "startMs": 4806878400000,
+        "endMs": 5122497600000,
+        "startDateTime": "2122-04-29T12:00:00.000+08:00",
+        "endDateTime": "2132-04-29T12:00:00.000+08:00"
+      }
+    ]
+  },
+  {
+    "caseId": "T08",
+    "gender": "male",
+    "birthMs": 522928800000,
+    "birthPillars": [
+      "丙寅",
+      "乙未",
+      "癸酉",
+      "辛酉"
+    ],
+    "firstStartMs": 632462400000,
+    "startAge": {
+      "years": 3,
+      "months": 5,
+      "days": 18,
+      "hours": 18
+    },
+    "direction": "forward",
+    "periods": [
+      {
+        "step": 1,
+        "pillar": "丙申",
+        "jiaziIndex": 32,
+        "startMs": 632462400000,
+        "endMs": 947995200000,
+        "startDateTime": "1990-01-16T12:00:00.000+08:00",
+        "endDateTime": "2000-01-16T12:00:00.000+08:00"
+      },
+      {
+        "step": 2,
+        "pillar": "丁酉",
+        "jiaziIndex": 33,
+        "startMs": 947995200000,
+        "endMs": 1263614400000,
+        "startDateTime": "2000-01-16T12:00:00.000+08:00",
+        "endDateTime": "2010-01-16T12:00:00.000+08:00"
+      },
+      {
+        "step": 3,
+        "pillar": "戊戌",
+        "jiaziIndex": 34,
+        "startMs": 1263614400000,
+        "endMs": 1579147200000,
+        "startDateTime": "2010-01-16T12:00:00.000+08:00",
+        "endDateTime": "2020-01-16T12:00:00.000+08:00"
+      },
+      {
+        "step": 4,
+        "pillar": "己亥",
+        "jiaziIndex": 35,
+        "startMs": 1579147200000,
+        "endMs": 1894766400000,
+        "startDateTime": "2020-01-16T12:00:00.000+08:00",
+        "endDateTime": "2030-01-16T12:00:00.000+08:00"
+      },
+      {
+        "step": 5,
+        "pillar": "庚子",
+        "jiaziIndex": 36,
+        "startMs": 1894766400000,
+        "endMs": 2210299200000,
+        "startDateTime": "2030-01-16T12:00:00.000+08:00",
+        "endDateTime": "2040-01-16T12:00:00.000+08:00"
+      },
+      {
+        "step": 6,
+        "pillar": "辛丑",
+        "jiaziIndex": 37,
+        "startMs": 2210299200000,
+        "endMs": 2525918400000,
+        "startDateTime": "2040-01-16T12:00:00.000+08:00",
+        "endDateTime": "2050-01-16T12:00:00.000+08:00"
+      },
+      {
+        "step": 7,
+        "pillar": "壬寅",
+        "jiaziIndex": 38,
+        "startMs": 2525918400000,
+        "endMs": 2841451200000,
+        "startDateTime": "2050-01-16T12:00:00.000+08:00",
+        "endDateTime": "2060-01-16T12:00:00.000+08:00"
+      },
+      {
+        "step": 8,
+        "pillar": "癸卯",
+        "jiaziIndex": 39,
+        "startMs": 2841451200000,
+        "endMs": 3157070400000,
+        "startDateTime": "2060-01-16T12:00:00.000+08:00",
+        "endDateTime": "2070-01-16T12:00:00.000+08:00"
+      },
+      {
+        "step": 9,
+        "pillar": "甲辰",
+        "jiaziIndex": 40,
+        "startMs": 3157070400000,
+        "endMs": 3472603200000,
+        "startDateTime": "2070-01-16T12:00:00.000+08:00",
+        "endDateTime": "2080-01-16T12:00:00.000+08:00"
+      },
+      {
+        "step": 10,
+        "pillar": "乙巳",
+        "jiaziIndex": 41,
+        "startMs": 3472603200000,
+        "endMs": 3788222400000,
+        "startDateTime": "2080-01-16T12:00:00.000+08:00",
+        "endDateTime": "2090-01-16T12:00:00.000+08:00"
+      },
+      {
+        "step": 11,
+        "pillar": "丙午",
+        "jiaziIndex": 42,
+        "startMs": 3788222400000,
+        "endMs": 4103755200000,
+        "startDateTime": "2090-01-16T12:00:00.000+08:00",
+        "endDateTime": "2100-01-16T12:00:00.000+08:00"
+      },
+      {
+        "step": 12,
+        "pillar": "丁未",
+        "jiaziIndex": 43,
+        "startMs": 4103755200000,
+        "endMs": 4419288000000,
+        "startDateTime": "2100-01-16T12:00:00.000+08:00",
+        "endDateTime": "2110-01-16T12:00:00.000+08:00"
+      },
+      {
+        "step": 13,
+        "pillar": "戊申",
+        "jiaziIndex": 44,
+        "startMs": 4419288000000,
+        "endMs": 4734820800000,
+        "startDateTime": "2110-01-16T12:00:00.000+08:00",
+        "endDateTime": "2120-01-16T12:00:00.000+08:00"
+      },
+      {
+        "step": 14,
+        "pillar": "己酉",
+        "jiaziIndex": 45,
+        "startMs": 4734820800000,
+        "endMs": 5050440000000,
+        "startDateTime": "2120-01-16T12:00:00.000+08:00",
+        "endDateTime": "2130-01-16T12:00:00.000+08:00"
+      }
+    ]
+  },
+  {
+    "caseId": "T08",
+    "gender": "female",
+    "birthMs": 522928800000,
+    "birthPillars": [
+      "丙寅",
+      "乙未",
+      "癸酉",
+      "辛酉"
+    ],
+    "firstStartMs": 743853600000,
+    "startAge": {
+      "years": 7,
+      "months": 0,
+      "days": 0,
+      "hours": 0
+    },
+    "direction": "reverse",
+    "periods": [
+      {
+        "step": 1,
+        "pillar": "甲午",
+        "jiaziIndex": 30,
+        "startMs": 743853600000,
+        "endMs": 1059386400000,
+        "startDateTime": "1993-07-28T18:00:00.000+08:00",
+        "endDateTime": "2003-07-28T18:00:00.000+08:00"
+      },
+      {
+        "step": 2,
+        "pillar": "癸巳",
+        "jiaziIndex": 29,
+        "startMs": 1059386400000,
+        "endMs": 1375005600000,
+        "startDateTime": "2003-07-28T18:00:00.000+08:00",
+        "endDateTime": "2013-07-28T18:00:00.000+08:00"
+      },
+      {
+        "step": 3,
+        "pillar": "壬辰",
+        "jiaziIndex": 28,
+        "startMs": 1375005600000,
+        "endMs": 1690538400000,
+        "startDateTime": "2013-07-28T18:00:00.000+08:00",
+        "endDateTime": "2023-07-28T18:00:00.000+08:00"
+      },
+      {
+        "step": 4,
+        "pillar": "辛卯",
+        "jiaziIndex": 27,
+        "startMs": 1690538400000,
+        "endMs": 2006157600000,
+        "startDateTime": "2023-07-28T18:00:00.000+08:00",
+        "endDateTime": "2033-07-28T18:00:00.000+08:00"
+      },
+      {
+        "step": 5,
+        "pillar": "庚寅",
+        "jiaziIndex": 26,
+        "startMs": 2006157600000,
+        "endMs": 2321690400000,
+        "startDateTime": "2033-07-28T18:00:00.000+08:00",
+        "endDateTime": "2043-07-28T18:00:00.000+08:00"
+      },
+      {
+        "step": 6,
+        "pillar": "己丑",
+        "jiaziIndex": 25,
+        "startMs": 2321690400000,
+        "endMs": 2637309600000,
+        "startDateTime": "2043-07-28T18:00:00.000+08:00",
+        "endDateTime": "2053-07-28T18:00:00.000+08:00"
+      },
+      {
+        "step": 7,
+        "pillar": "戊子",
+        "jiaziIndex": 24,
+        "startMs": 2637309600000,
+        "endMs": 2952842400000,
+        "startDateTime": "2053-07-28T18:00:00.000+08:00",
+        "endDateTime": "2063-07-28T18:00:00.000+08:00"
+      },
+      {
+        "step": 8,
+        "pillar": "丁亥",
+        "jiaziIndex": 23,
+        "startMs": 2952842400000,
+        "endMs": 3268461600000,
+        "startDateTime": "2063-07-28T18:00:00.000+08:00",
+        "endDateTime": "2073-07-28T18:00:00.000+08:00"
+      },
+      {
+        "step": 9,
+        "pillar": "丙戌",
+        "jiaziIndex": 22,
+        "startMs": 3268461600000,
+        "endMs": 3583994400000,
+        "startDateTime": "2073-07-28T18:00:00.000+08:00",
+        "endDateTime": "2083-07-28T18:00:00.000+08:00"
+      },
+      {
+        "step": 10,
+        "pillar": "乙酉",
+        "jiaziIndex": 21,
+        "startMs": 3583994400000,
+        "endMs": 3899613600000,
+        "startDateTime": "2083-07-28T18:00:00.000+08:00",
+        "endDateTime": "2093-07-28T18:00:00.000+08:00"
+      },
+      {
+        "step": 11,
+        "pillar": "甲申",
+        "jiaziIndex": 20,
+        "startMs": 3899613600000,
+        "endMs": 4215060000000,
+        "startDateTime": "2093-07-28T18:00:00.000+08:00",
+        "endDateTime": "2103-07-28T18:00:00.000+08:00"
+      },
+      {
+        "step": 12,
+        "pillar": "癸未",
+        "jiaziIndex": 19,
+        "startMs": 4215060000000,
+        "endMs": 4530679200000,
+        "startDateTime": "2103-07-28T18:00:00.000+08:00",
+        "endDateTime": "2113-07-28T18:00:00.000+08:00"
+      },
+      {
+        "step": 13,
+        "pillar": "壬午",
+        "jiaziIndex": 18,
+        "startMs": 4530679200000,
+        "endMs": 4846212000000,
+        "startDateTime": "2113-07-28T18:00:00.000+08:00",
+        "endDateTime": "2123-07-28T18:00:00.000+08:00"
+      },
+      {
+        "step": 14,
+        "pillar": "辛巳",
+        "jiaziIndex": 17,
+        "startMs": 4846212000000,
+        "endMs": 5161831200000,
+        "startDateTime": "2123-07-28T18:00:00.000+08:00",
+        "endDateTime": "2133-07-28T18:00:00.000+08:00"
+      }
+    ]
+  }
+]

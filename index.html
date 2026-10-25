@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080e10">
+  <meta name="description" content="将四柱时间符号映射为 Langford 动力系统，探索生辰核与大运、流年、流月、流日、流时的形态响应。">
+  <title>TAONIQ · 太一观流</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/model/worker-source.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#laboratory">跳到观流仪</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="TAONIQ 太一观流首页"><span class="brand-seal" aria-hidden="true">太<br>一</span><span><b>TAONIQ</b><small>太 一 · 观 流</small></span></a>
+    <nav aria-label="主导航"><a href="#laboratory" aria-current="page">观流仪</a><a href="theory.html">模型与来源 <span aria-hidden="true">↗</span></a><a href="README.md">算法总结</a></nav>
+    <span class="system-tag"><i></i> v0.10 / v0.9 CORE</span>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">SYMBOLIC TIME × NONLINEAR DYNAMICS</p><h1 id="page-title">生辰为核<span class="title-punct">，</span>时间成流<span class="square-mark" aria-hidden="true">◇</span></h1><p class="intro-copy">以四柱为输入，以轨迹观其变。让大运与日月时序，成为同一动力系统的不同作用层。</p></div>
+      <div class="intro-note"><span class="mono">观测协议 / 01</span><p>这是一台形态实验仪。<br>传统历法提供符号，数学模型生成轨迹。</p></div>
+    </section>
+    <noscript><p class="notice danger">此页面需要 JavaScript 在本机计算轨迹。你仍可阅读<a href="theory.html">模型与来源</a>和<a href="README.md">算法总结</a>。</p></noscript>
+    <section class="laboratory" id="laboratory" aria-label="生辰与流盘可视化实验">
+      <aside class="input-panel">
+        <div class="section-heading"><span class="section-number">壹</span><h2>定生辰</h2><span class="mono">NATAL INPUT</span></div>
+        <form id="birthForm">
+          <label for="birthDate">公历出生日期</label><input id="birthDate" name="birthDate" type="date" required min="1901-01-01" value="1975-08-26">
+          <div class="form-row"><div><label for="birthTime">出生时间</label><input id="birthTime" name="birthTime" type="time" step="1" required value="04:00:00"></div><div><label for="gender">传统排运</label><select id="gender" name="gender"><option value="male">男命</option><option value="female">女命</option></select></div></div>
+          <p class="field-note">统一北京时间 UTC+08。按节气排月、换年；未校正真太阳时。性别选项用于传统大运顺逆规则。</p>
+          <button type="submit" class="button primary" id="submitBirth"><span>生成生辰核</span><span aria-hidden="true">↗</span></button>
+        </form>
+        <div class="preset-head"><span>八个对照生辰</span><span class="mono">SAME ELEMENTS ≠ SAME ORDER</span></div>
+        <div class="presets" id="presets" aria-label="选择对照案例"></div>
+        <p class="field-note" id="presetNote">每两例为一组，包含五行总量相同、四柱结构不同的对照。</p>
+        <div class="natal-readout"><div class="micro-head"><h3>四柱</h3><span class="mono" id="chartCode">待排盘</span></div><div class="pillars" id="natalPillars" aria-label="出生四柱"><span>年<b>—</b></span><span>月<b>—</b></span><span>日<b>—</b></span><span>时<b>—</b></span></div><div class="elements" id="elements" aria-label="表层五行计数"></div><p class="field-note">五行条为八个明字的归类计数；参数编码另保留柱位与关系。</p></div>
+        <div class="profile-panel"><div class="micro-head"><h3>映射状态</h3><span class="status-dot" id="profileDot"></span></div><p id="profileState">准备计算</p><p class="field-note" id="profileDetail">同一生辰固定使用同一映射，调时间不会临时换方案。</p><button type="button" class="button subtle" id="calibrate" disabled>校准此生辰 · 756 条件</button><button type="button" class="text-button" id="cancelCalibration" hidden>停止校准，保留预览</button><p class="field-note" id="domainNote" hidden></p></div>
+      </aside>
+      <div class="observation-panel">
+        <div class="stage-toolbar"><div class="section-heading"><span class="section-number">贰</span><h2>观其形</h2></div><div class="view-tools"><label for="leftMode" class="sr-only">左侧比较对象</label><select id="leftMode"><option value="birth">生辰核 ↔ 流盘</option><option value="noDayun">去大运 ↔ 完整流盘</option></select><button type="button" class="icon-button" id="resetView" title="恢复共同视角" aria-label="恢复共同视角">⌖</button></div></div>
+        <div class="canvases" id="stage">
+          <figure class="orbit-panel"><figcaption><div><span class="mono figure-code">A / ORIGIN</span><h3 id="leftTitle">生辰核</h3></div><span class="figure-badge jade" id="leftBadge">固定八参数</span></figcaption><div class="canvas-wrap"><canvas id="natalCanvas" aria-label="生辰核三维轨迹投影">生辰核轨迹</canvas><div class="canvas-empty" id="natalEmpty"><span>⌁</span><p>正在构建生辰核</p></div><span class="canvas-corner">X · Y · Z</span></div><div class="figure-footer"><span id="leftDetail">仅四柱输入</span><span class="mono" id="leftMetric">—</span></div></figure>
+          <figure class="orbit-panel"><figcaption><div><span class="mono figure-code">B / RESPONSE</span><h3>流盘</h3></div><span class="figure-badge gold" id="flowBadge">五层作用</span></figcaption><div class="canvas-wrap"><canvas id="flowCanvas" aria-label="选定时刻的流盘三维轨迹投影">流盘轨迹</canvas><div class="canvas-empty" id="flowEmpty"><span>⌁</span><p>等待数值计算</p></div><span class="canvas-corner">X · Y · Z</span></div><div class="figure-footer"><span id="rightDetail">选定时刻独立计算</span><span class="mono" id="rightMetric">—</span></div></figure>
+        </div>
+        <div class="view-caption"><span><span class="legend-line jade"></span>共同坐标与比例 · 拖动任一图同步旋转</span><label for="zoom">缩放 <input id="zoom" type="range" min="0.5" max="2" step="0.05" value="1" aria-valuetext="1 倍"><output id="zoomValue" for="zoom">1.00×</output></label></div>
+        <div class="compute-bar" role="status" aria-live="polite" aria-atomic="true"><span id="statusText">正在加载本地算法…</span><span class="mono" id="statusCount"></span></div><progress id="computeProgress" max="1" value="0" aria-label="计算进度"></progress>
+        <p class="notice danger" id="error" role="alert" hidden></p>
+        <div class="timeline-panel"><div class="timeline-top"><div><p class="eyebrow">TIME COORDINATE</p><label for="targetTime" class="sr-only">流盘观测时刻，北京时间</label><input id="targetTime" type="datetime-local" step="1" aria-describedby="timelineHelp"></div><div class="play-controls"><label for="playStep" class="sr-only">播放步长</label><select id="playStep"><option value="year">逐年</option><option value="month">逐月</option><option value="day">逐日</option><option value="hour">逐时辰</option></select><button type="button" id="play" class="button small" disabled aria-pressed="false">播放 <span aria-hidden="true">▷</span></button><button type="button" id="goNow" class="text-button" disabled>至今</button></div></div><label for="timeline" class="sr-only">从出生到现在的时间轴</label><input id="timeline" type="range" min="0" max="10000" step="1" value="10000" disabled><div class="timeline-labels"><span id="birthLabel">出生</span><span class="mono" id="ageLabel">—</span><span id="nowLabel">现在</span></div><p class="field-note" id="timelineHelp">每个时点独立计算；不是出生后历史累积轨迹。播放会逐日期重算，不在两幅图之间插值。</p></div>
+        <div class="layers-top"><div class="section-heading"><span class="section-number">叁</span><h2>调五运</h2><span class="mono">LAYER INPUT</span></div><button type="button" id="resetLayers" class="text-button" disabled>恢复默认</button></div>
+        <div class="layers" id="layers"></div>
+        <p class="field-note layer-note">默认输入预算：大运 ＞ 年 ＞ 月 ＞ 日 ＞ 时。关闭某层不把额度分给其他层；输入强弱不等于图像变化一定按此排序。</p>
+        <div class="bottom-tools"><p id="dayunDescription">大运起点与顺逆随生辰计算。</p><button type="button" id="export" class="text-button" disabled>导出当前设置与参数 <span aria-hidden="true">↓</span></button></div>
+      </div>
+    </section>
+    <section class="interpretation" aria-labelledby="mappingTitle"><div class="interpretation-heading"><p class="eyebrow">READ THE MAPPING</p><h2 id="mappingTitle">从符号到动力，<br>中间发生了什么？</h2><a href="theory.html" class="text-link">展开方程、依据与边界 <span aria-hidden="true">↗</span></a></div><div class="mapping-steps"><article><span class="step-index">01 / 历法层</span><h3>四柱，组织时间</h3><p>公历时刻按干支历法得到年、月、日、时四柱。五行、阴阳与柱位组成符号关系；大运按出生月柱、顺逆及起运规则推排。</p><span class="evidence-label">传统规则 · 历法计算</span></article><article><span class="step-index">02 / 映射层</span><h3>关系，进入参数</h3><p>有序四柱生成八个生辰参数；选定时刻的大运与流年、月、日、时分别形成驱动方向，经过固定预算与有限响应改变参数。</p><span class="evidence-label">项目设计 · 可检查的工程假设</span></article><article><span class="step-index">03 / 动力层</span><h3>方程，产生形态</h3><p>在同一 Langford 扩展方程下数值积分，观察固定点、周期或更复杂的轨迹。复杂形态不自动意味着混沌，更不能证明命运预测。</p><span class="evidence-label">数值模拟 · 不作命理效验</span></article></div></section>
+    <details class="parameters"><summary>检查本次计算的八参数与观测协议 <span class="mono">MODEL READOUT</span></summary><div class="parameter-content"><div id="parameterTable"><p>生成后显示。</p></div><p class="field-note" id="protocolNote">生辰核与流盘采用相同初态、积分规则、观察窗口及投影。未标记为简单形态，不等于已证明混沌。</p><pre id="technicalState" aria-label="映射与计算细节">等待计算</pre></div></details>
+  </main>
+  <footer class="site-footer"><span>TAONIQ <i>／</i> 以数观象</span><p>出生信息与轨迹在本机计算。模型是一项符号可视化实验。</p><a href="theory.html">模型与来源 ↗</a></footer>
+</body>
+</html>

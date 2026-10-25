@@ -1,0 +1,366 @@
+{
+  "cases": [
+    {
+      "id": "T01",
+      "inputId": "B0648",
+      "pairId": "P01",
+      "pairType": "same_pillar_multiset",
+      "partnerId": "T02",
+      "pillars": [
+        "乙巳",
+        "甲申",
+        "乙卯",
+        "戊寅"
+      ],
+      "birthMs": -137044800000,
+      "endMs": 1792855597000,
+      "patternLabel": "正财格候选",
+      "visibleWuxing": {
+        "金": 1,
+        "木": 5,
+        "水": 0,
+        "火": 1,
+        "土": 1
+      },
+      "parameters": {
+        "alpha": 1.562366581594038,
+        "beta": 0.6012955811652219,
+        "tau": 1.2502545146777848,
+        "delta": 2.190747885652388,
+        "epsilon": 0.5727542141867343,
+        "zeta": 0.9855329483690145,
+        "kappa": 3.3310145355151684,
+        "eta": 0.7842807156622666
+      },
+      "anchorId": "P094",
+      "demoGender": "male"
+    },
+    {
+      "id": "T02",
+      "inputId": "B0900",
+      "pairId": "P01",
+      "pairType": "same_pillar_multiset",
+      "partnerId": "T01",
+      "pillars": [
+        "乙卯",
+        "甲申",
+        "乙巳",
+        "戊寅"
+      ],
+      "birthMs": 178315200000,
+      "endMs": 1792855597000,
+      "patternLabel": "正财格候选",
+      "visibleWuxing": {
+        "金": 1,
+        "木": 5,
+        "水": 0,
+        "火": 1,
+        "土": 1
+      },
+      "parameters": {
+        "alpha": 1.5630872251322605,
+        "beta": 0.6015169269669128,
+        "tau": 1.2502545146777848,
+        "delta": 2.190747885652388,
+        "epsilon": 0.5720335706485119,
+        "zeta": 0.984204873558869,
+        "kappa": 3.3310145355151684,
+        "eta": 0.7842807156622666
+      },
+      "anchorId": "P094",
+      "demoGender": "male"
+    },
+    {
+      "id": "T03",
+      "inputId": "B1683",
+      "pairId": "P02",
+      "pairType": "same_pillar_multiset",
+      "partnerId": "T04",
+      "pillars": [
+        "乙酉",
+        "戊子",
+        "癸未",
+        "丙辰"
+      ],
+      "birthMs": 1135468800000,
+      "endMs": 1792855597000,
+      "patternLabel": "建禄结构（取用待核）",
+      "visibleWuxing": {
+        "金": 1,
+        "木": 1,
+        "水": 2,
+        "火": 1,
+        "土": 3
+      },
+      "parameters": {
+        "alpha": 1.2331730252863249,
+        "beta": 0.2663999543980697,
+        "tau": 1.249532153349897,
+        "delta": 3.965990045486406,
+        "epsilon": 0.1268369793402745,
+        "zeta": 1.2675158458811873,
+        "kappa": 2.245836590727712,
+        "eta": 2.8514511286798787
+      },
+      "anchorId": "P099",
+      "demoGender": "female"
+    },
+    {
+      "id": "T04",
+      "inputId": "B1746",
+      "pairId": "P02",
+      "pairType": "same_pillar_multiset",
+      "partnerId": "T03",
+      "pillars": [
+        "戊子",
+        "丙辰",
+        "乙酉",
+        "癸未"
+      ],
+      "birthMs": 1208239200000,
+      "endMs": 1792855597000,
+      "patternLabel": "杂气 正财 / 偏印候选",
+      "visibleWuxing": {
+        "金": 1,
+        "木": 1,
+        "水": 2,
+        "火": 1,
+        "土": 3
+      },
+      "parameters": {
+        "alpha": 1.3603107823736236,
+        "beta": 0.5253973893280084,
+        "tau": 1.1728368103721634,
+        "delta": 5.971963810598335,
+        "epsilon": 0.2957245809757105,
+        "zeta": 1.2238606942700132,
+        "kappa": 2.164788569713415,
+        "eta": 3.6481370361838352
+      },
+      "anchorId": "P062",
+      "demoGender": "female"
+    },
+    {
+      "id": "T05",
+      "inputId": "B1208",
+      "pairId": "P03",
+      "pairType": "same_visible",
+      "partnerId": "T06",
+      "pillars": [
+        "丁卯",
+        "戊申",
+        "丁未",
+        "甲辰"
+      ],
+      "birthMs": 556934400000,
+      "endMs": 1792855597000,
+      "patternLabel": "伤官格候选",
+      "visibleWuxing": {
+        "金": 1,
+        "木": 2,
+        "水": 0,
+        "火": 2,
+        "土": 3
+      },
+      "parameters": {
+        "alpha": 0.8644228937343983,
+        "beta": 0.9419844048496113,
+        "tau": 1.1699398356877013,
+        "delta": 3.9117014449457934,
+        "epsilon": 0.5381123803555683,
+        "zeta": 0.4059110840272232,
+        "kappa": 2.0249446497617716,
+        "eta": 4.090322140856892
+      },
+      "anchorId": "P021",
+      "demoGender": "male"
+    },
+    {
+      "id": "T06",
+      "inputId": "B1221",
+      "pairId": "P03",
+      "pairType": "same_visible",
+      "partnerId": "T05",
+      "pillars": [
+        "戊辰",
+        "乙卯",
+        "丙戌",
+        "丁酉"
+      ],
+      "birthMs": 575892000000,
+      "endMs": 1792855597000,
+      "patternLabel": "正印格候选",
+      "visibleWuxing": {
+        "金": 1,
+        "木": 2,
+        "水": 0,
+        "火": 2,
+        "土": 3
+      },
+      "parameters": {
+        "alpha": 0.7419198992883816,
+        "beta": 0.46873002729078334,
+        "tau": 0.5327532182498218,
+        "delta": 4.3662675293341255,
+        "epsilon": 0.05080786076788145,
+        "zeta": 0.33967901907730247,
+        "kappa": 1.3044748723850712,
+        "eta": 2.10662365092148
+      },
+      "anchorId": "P116",
+      "demoGender": "male"
+    },
+    {
+      "id": "T07",
+      "inputId": "B1162",
+      "pairId": "P04",
+      "pairType": "same_visible",
+      "partnerId": "T08",
+      "pillars": [
+        "乙丑",
+        "丁亥",
+        "辛酉",
+        "庚寅"
+      ],
+      "birthMs": 501105600000,
+      "endMs": 1792855597000,
+      "patternLabel": "伤官格候选",
+      "visibleWuxing": {
+        "金": 3,
+        "木": 2,
+        "水": 1,
+        "火": 1,
+        "土": 1
+      },
+      "parameters": {
+        "alpha": 0.7221962029101535,
+        "beta": 0.4649541809568629,
+        "tau": 0.516729109399829,
+        "delta": 6.064728268850831,
+        "epsilon": 0.19090009419961879,
+        "zeta": -0.49188455964074407,
+        "kappa": 1.6680019824516485,
+        "eta": 3.430155606029307
+      },
+      "anchorId": "P089",
+      "demoGender": "female"
+    },
+    {
+      "id": "T08",
+      "inputId": "B1181",
+      "pairId": "P04",
+      "pairType": "same_visible",
+      "partnerId": "T07",
+      "pillars": [
+        "丙寅",
+        "乙未",
+        "癸酉",
+        "辛酉"
+      ],
+      "birthMs": 522928800000,
+      "endMs": 1792855597000,
+      "patternLabel": "杂气食神格候选",
+      "visibleWuxing": {
+        "金": 3,
+        "木": 2,
+        "水": 1,
+        "火": 1,
+        "土": 1
+      },
+      "parameters": {
+        "alpha": 0.9309373866631169,
+        "beta": 0.6335544014603867,
+        "tau": 0.8591236146191692,
+        "delta": 5.006300556369528,
+        "epsilon": 0.47968143725959755,
+        "zeta": -0.8231086298019726,
+        "kappa": 1.0961299809023897,
+        "eta": 3.4322802180319254
+      },
+      "anchorId": "P105",
+      "demoGender": "female"
+    }
+  ],
+  "projection": {
+    "center": [
+      -0.3835333153547009,
+      0.0814441302050235,
+      0.981558454197919
+    ],
+    "radius": 4.158928674224513,
+    "camera_degrees": [
+      18,
+      -72,
+      0
+    ],
+    "all_cases_times_and_views_share_world_origin_and_scale": true
+  },
+  "legacyDrive": {
+    "version": "v0.8",
+    "weights": [
+      0.7017051434987018,
+      0.21051154304961053,
+      0.06315346291488316,
+      0.01894603887446495,
+      0.005683811662339485
+    ],
+    "gain": 0.15,
+    "amplitudes": [
+      1,
+      0.8,
+      1.2,
+      0.5,
+      0.6,
+      1.4,
+      1.3,
+      1.1
+    ],
+    "parameter_order": [
+      "alpha",
+      "beta",
+      "tau",
+      "delta",
+      "epsilon",
+      "zeta",
+      "kappa",
+      "eta"
+    ],
+    "additive_indices": [
+      5
+    ],
+    "disabled_layers": [],
+    "birth_weights": [
+      0.4,
+      0.3,
+      0.2,
+      0.1
+    ],
+    "hadamard": "standardSylvester8/sqrt8,no permutations",
+    "positive_transform": "alpha,delta,epsilon,eta=birth*exp(gain*amplitude*D)",
+    "tau_transform": "birth-axis-branch",
+    "kappa_transform": "negative-axis-gap",
+    "beta_transform": "axis-root-logistic",
+    "axis_beta_cap": 0.8,
+    "zeta_transform": "birth+gain*amplitude*D",
+    "unit_normalization": "Relation components determine direction; fixed layer budgets determine strength",
+    "layer_order": [
+      "dayun",
+      "year",
+      "month",
+      "day",
+      "hour"
+    ],
+    "raw_weights": [
+      1,
+      0.3,
+      0.09,
+      0.027,
+      0.0081
+    ],
+    "control_policy": "Normalize default budgets once. Effective weights equal fixed budgets times enabled multipliers; never redistribute on disable or before first luck period.",
+    "dayun_policy": "Before first start dayunPillar is null and effective dayun budget is zero. Dayun pillar uses exactly the same natal-relation direction encoding as other layers.",
+    "engineering_hierarchy": "Default input strength hierarchy is chosen for the visual model, not a classical quantitative law or a proof of geometric-response ordering.",
+    "gain_policy": "Uniform gain 0.15 for every case, date, sex profile and control combination. Chosen on finite-window development comparisons; no per-case adaptation or geometry guarantee."
+  },
+  "originalEndMs": 1792855597000
+}

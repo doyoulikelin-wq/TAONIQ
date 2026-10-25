@@ -1,0 +1,23 @@
+/* Finite-window 3D recurrence screening, not a chaos/uniqueness classifier.
+   FFT autocorrelation + actual separated local minima on 0.1..45 model units.
+   Fractional lag uses linear interpolation; quadratic error minimized analytically. */
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.FlowMorphology=factory();})(typeof globalThis!=='undefined'?globalThis:this,function(){
+'use strict';
+function fft(re,im,inverse){const n=re.length;for(let i=1,j=0;i<n;i++){let b=n>>1;for(;j&b;b>>=1)j^=b;j^=b;if(i<j){let t=re[i];re[i]=re[j];re[j]=t;t=im[i];im[i]=im[j];im[j]=t;}}
+ for(let len=2;len<=n;len*=2){const ang=(inverse?2:-2)*Math.PI/len,wr0=Math.cos(ang),wi0=Math.sin(ang);for(let start=0;start<n;start+=len){let wr=1,wi=0;for(let j=0;j<len/2;j++){const a=start+j,b=a+len/2,tr=wr*re[b]-wi*im[b],ti=wr*im[b]+wi*re[b];re[b]=re[a]-tr;im[b]=im[a]-ti;re[a]+=tr;im[a]+=ti;const tmp=wr*wr0-wi*wi0;wi=wr*wi0+wi*wr0;wr=tmp;}}}
+ if(inverse)for(let i=0;i<n;i++){re[i]/=n;im[i]/=n;}
+}
+function metrics(points,dt){dt=dt===undefined?.01:dt;if(!(dt>0)||points.length%3||points.length<9)throw Error('xyz array and positive sample interval required');const n=points.length/3,mean=[0,0,0],min=[Infinity,Infinity,Infinity],max=[-Infinity,-Infinity,-Infinity];
+ for(let i=0;i<points.length;i++){const x=points[i];if(!Number.isFinite(x))return {finite:false,class:'invalid_nonfinite'};const j=i%3;mean[j]+=x;if(x<min[j])min[j]=x;if(x>max[j])max[j]=x;}for(let j=0;j<3;j++)mean[j]/=n;
+ const q=new Float64Array(points.length),cs=new Float64Array(n+1);let variance=0;for(let i=0;i<n;i++){let v=0;for(let j=0;j<3;j++){const x=points[3*i+j]-mean[j];q[3*i+j]=x;v+=x*x;}variance+=v;cs[i+1]=variance;}variance/=n;const rms=Math.sqrt(variance),base={finite:true,rms,span:max.map((x,j)=>x-min[j])};if(rms<1e-6)return Object.assign(base,{class:'near_fixed_point',recurrence:null});
+ let size=1;while(size<2*n)size*=2;const ps=new Float64Array(size);for(let j=0;j<3;j++){const re=new Float64Array(size),im=new Float64Array(size);for(let i=0;i<n;i++)re[i]=q[3*i+j];fft(re,im,false);for(let i=0;i<size;i++)ps[i]+=re[i]*re[i]+im[i]*im[i];}const im=new Float64Array(size);fft(ps,im,true);
+ const low=Math.max(2,Math.ceil(.1/dt)),high=Math.min(Math.floor(45/dt),Math.floor(n/2)),sq=new Float64Array(high+1);for(let k=0;k<=high;k++)sq[k]=Math.max(0,(cs[n]-cs[k]+cs[n-k]-2*ps[k])/(n-k)/variance);
+ const peaks=[];for(let k=1;k<high;k++){if(!(sq[k]<sq[k-1]&&sq[k]<=sq[k+1]))continue;let end=k;while(end+1<=high&&sq[end+1]===sq[k])end++;if(end===high||sq[end]>=sq[end+1]){k=end;continue;}const at=Math.floor((k+end)/2);let left=sq[at],right=sq[at];for(let i=k-1;i>=0;i--){if(sq[i]<sq[at])break;left=Math.max(left,sq[i]);}for(let i=end+1;i<=high;i++){if(sq[i]<sq[at])break;right=Math.max(right,sq[i]);}if(at>=low&&Math.min(left,right)-sq[at]>=.05)peaks.push(at);k=end;}
+ const empty={normalized_rmse:null,period:null,block_errors:[],candidate_count:0,lag_range:[.1,high*dt]};if(!peaks.length)return Object.assign(base,{class:'not_flagged_simple',recurrence:empty});
+ const chosen=[...new Set([...peaks.slice(0,6),...peaks.slice().sort((a,b)=>sq[a]-sq[b]).slice(0,12)])];
+ function errorAt(k,f,blocks){let sum=0;const len=n-k-1,sums=[0,0,0],counts=[0,0,0],quot=Math.floor(len/3),rem=len%3,b1=quot+(rem>0),b2=b1+quot+(rem>1);for(let i=0;i<len;i++){let v=0;for(let j=0;j<3;j++){const a=q[3*(i+k)+j]-q[3*i+j],b=q[3*(i+k+1)+j]-q[3*(i+k)+j],d=a+f*b;v+=d*d;}sum+=v;if(blocks){const b=i<b1?0:i<b2?1:2;sums[b]+=v;counts[b]++;}}return blocks?sums.map((x,j)=>Math.sqrt(x/counts[j]/variance)):Math.sqrt(sum/len/variance);}
+ function interval(k){let A=0,B=0,C=0;const len=n-k-1;for(let i=0;i<len;i++)for(let j=0;j<3;j++){const a=q[3*(i+k)+j]-q[3*i+j],b=q[3*(i+k+1)+j]-q[3*(i+k)+j];A+=a*a;B+=a*b;C+=b*b;}const f=Math.max(0,Math.min(1,C>0?-B/C:0)),err=Math.sqrt(Math.max(0,A+2*f*B+f*f*C)/len/variance);return {lag:k+f,err};}
+ const refined=[];for(const k of chosen){const pair=[];for(const z of [k-1,k])if(z>=low&&z<high)pair.push(interval(z));if(pair.length)refined.push(pair.reduce((a,b)=>a.err<b.err?a:b));}let best=refined.reduce((a,b)=>a.err<b.err?a:b),eligible=refined.filter(r=>r.err<=Math.max(best.err*1.5,best.err+.001));best=eligible.reduce((a,b)=>a.lag<b.lag?a:b);const k=Math.floor(best.lag),f=best.lag-k,err=errorAt(k,f,false),blocks=errorAt(k,f,true);const recurrence={normalized_rmse:err,period:best.lag*dt,block_errors:blocks,candidate_count:peaks.length,lag_range:[.1,high*dt]};return Object.assign(base,{class:err<.025&&Math.max(...blocks)<.04?'near_periodic':'not_flagged_simple',recurrence});
+}
+return {metrics};
+});

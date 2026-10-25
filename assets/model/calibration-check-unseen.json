@@ -1,0 +1,89 @@
+{
+  "syntheticBirth": "1991-03-08T11:37:28",
+  "pillars": [
+    "辛未",
+    "辛卯",
+    "丁丑",
+    "丙午"
+  ],
+  "domainFallback": false,
+  "elapsedMs": 14612,
+  "completed": 756,
+  "selected": "v08",
+  "status": "calibrated_fallback_v08",
+  "finite": true,
+  "morphology": {
+    "birth": {
+      "finite": true,
+      "rms": 1.6169568181241472,
+      "span": [
+        3.81416349004071,
+        4.551469101849916,
+        4.01395152900457
+      ],
+      "class": "not_flagged_simple",
+      "recurrence": {
+        "normalized_rmse": 0.8806295342748174,
+        "period": 1.1541064793690659,
+        "block_errors": [
+          0.9025313740865682,
+          0.8197337986589466,
+          0.9165263378465371
+        ],
+        "candidate_count": 15,
+        "lag_range": [
+          0.1,
+          45
+        ]
+      }
+    },
+    "flow": {
+      "finite": true,
+      "rms": 1.714560959642902,
+      "span": [
+        3.743621641078364,
+        4.69553874317895,
+        4.139660702531912
+      ],
+      "class": "not_flagged_simple",
+      "recurrence": {
+        "normalized_rmse": 0.4814645508427564,
+        "period": 11.065675925702415,
+        "block_errors": [
+          0.5347790464418198,
+          0.3565916399271326,
+          0.5312791374121505
+        ],
+        "candidate_count": 5,
+        "lag_range": [
+          0.1,
+          45
+        ]
+      }
+    },
+    "noDayun": {
+      "finite": true,
+      "rms": 1.6496703579428076,
+      "span": [
+        3.265346235363945,
+        4.217574189037967,
+        3.982939089348595
+      ],
+      "class": "near_periodic",
+      "recurrence": {
+        "normalized_rmse": 0.00018587847781893123,
+        "period": 12.128270084844186,
+        "block_errors": [
+          0.00018587595286405026,
+          0.00018587540620927195,
+          0.00018588407425669434
+        ],
+        "candidate_count": 10,
+        "lag_range": [
+          0.1,
+          45
+        ]
+      }
+    }
+  }
+}

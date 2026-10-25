@@ -1,0 +1,1166 @@
+{
+  "id": "birth-only-canonical-v1.1",
+  "frozenAt": "2026-10-25T08:00:27.747Z",
+  "canonicalProbes": [
+    {
+      "probe": 0,
+      "dayun": "甲子",
+      "flowPillars": [
+        "庚辰",
+        "己丑",
+        "戊寅",
+        "丙辰"
+      ],
+      "epoch": 979516800000,
+      "jiaziIndex": 0
+    },
+    {
+      "probe": 1,
+      "dayun": "辛未",
+      "flowPillars": [
+        "壬午",
+        "壬寅",
+        "甲寅",
+        "己巳"
+      ],
+      "epoch": 1013738400000,
+      "jiaziIndex": 7
+    },
+    {
+      "probe": 2,
+      "dayun": "戊寅",
+      "flowPillars": [
+        "癸未",
+        "乙卯",
+        "丁亥",
+        "丙午"
+      ],
+      "epoch": 1047700800000,
+      "jiaziIndex": 14
+    },
+    {
+      "probe": 3,
+      "dayun": "乙酉",
+      "flowPillars": [
+        "甲申",
+        "戊辰",
+        "甲子",
+        "辛未"
+      ],
+      "epoch": 1082008800000,
+      "jiaziIndex": 21
+    },
+    {
+      "probe": 4,
+      "dayun": "壬辰",
+      "flowPillars": [
+        "乙酉",
+        "辛巳",
+        "己亥",
+        "壬申"
+      ],
+      "epoch": 1116144000000,
+      "jiaziIndex": 28
+    },
+    {
+      "probe": 5,
+      "dayun": "己亥",
+      "flowPillars": [
+        "丙戌",
+        "甲午",
+        "乙亥",
+        "乙酉"
+      ],
+      "epoch": 1150365600000,
+      "jiaziIndex": 35
+    },
+    {
+      "probe": 6,
+      "dayun": "丙午",
+      "flowPillars": [
+        "丁亥",
+        "丁未",
+        "庚戌",
+        "丙戌"
+      ],
+      "epoch": 1184500800000,
+      "jiaziIndex": 42
+    },
+    {
+      "probe": 7,
+      "dayun": "癸丑",
+      "flowPillars": [
+        "戊子",
+        "庚申",
+        "丁亥",
+        "辛亥"
+      ],
+      "epoch": 1218808800000,
+      "jiaziIndex": 49
+    },
+    {
+      "probe": 8,
+      "dayun": "庚申",
+      "flowPillars": [
+        "己丑",
+        "癸酉",
+        "甲子",
+        "甲子"
+      ],
+      "epoch": 1253030400000,
+      "jiaziIndex": 56
+    },
+    {
+      "probe": 9,
+      "dayun": "丁卯",
+      "flowPillars": [
+        "庚寅",
+        "丙戌",
+        "己亥",
+        "乙丑"
+      ],
+      "epoch": 1287165600000,
+      "jiaziIndex": 3
+    },
+    {
+      "probe": 10,
+      "dayun": "甲戌",
+      "flowPillars": [
+        "辛卯",
+        "己亥",
+        "乙亥",
+        "戊寅"
+      ],
+      "epoch": 1321387200000,
+      "jiaziIndex": 10
+    },
+    {
+      "probe": 11,
+      "dayun": "辛巳",
+      "flowPillars": [
+        "壬辰",
+        "壬子",
+        "辛亥",
+        "辛卯"
+      ],
+      "epoch": 1355608800000,
+      "jiaziIndex": 17
+    }
+  ],
+  "presets": [
+    [
+      "noDayun",
+      [
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    [
+      "halfdayun",
+      [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      [
+        0.5,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    [
+      "default",
+      [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    [
+      "dayun15",
+      [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      [
+        1.5,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    [
+      "dayun2",
+      [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      [
+        2,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    [
+      "onlydayun",
+      [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    [
+      "maximum",
+      [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      [
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    ]
+  ],
+  "candidates": [
+    {
+      "id": "v08",
+      "gain": 0.15
+    },
+    {
+      "id": "r0.2",
+      "gain": 0.2,
+      "tag": "rotation",
+      "amplitudes": [
+        0.12,
+        0.12,
+        0.12,
+        0.6,
+        0.12,
+        1.8,
+        0.12,
+        0.7
+      ],
+      "response_caps": [
+        0.07,
+        0.07,
+        0.07,
+        0.3,
+        0.07,
+        0.8,
+        0.07,
+        0.35
+      ],
+      "direction_matrix": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "r0.4",
+      "gain": 0.4,
+      "tag": "rotation",
+      "amplitudes": [
+        0.12,
+        0.12,
+        0.12,
+        0.6,
+        0.12,
+        1.8,
+        0.12,
+        0.7
+      ],
+      "response_caps": [
+        0.07,
+        0.07,
+        0.07,
+        0.3,
+        0.07,
+        0.8,
+        0.07,
+        0.35
+      ],
+      "direction_matrix": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "rotation_R0",
+      "gain": 0.8,
+      "tag": "rotation",
+      "amplitudes": [
+        0.12,
+        0.12,
+        0.12,
+        0.6,
+        0.12,
+        1.8,
+        0.12,
+        0.7
+      ],
+      "response_caps": [
+        0.07,
+        0.07,
+        0.07,
+        0.3,
+        0.07,
+        0.8,
+        0.07,
+        0.35
+      ],
+      "direction_matrix": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "shear_R7",
+      "gain": 0.8,
+      "tag": "shear",
+      "amplitudes": [
+        0.18,
+        0.18,
+        0.18,
+        0.15,
+        0.18,
+        2.2,
+        0.18,
+        0.35
+      ],
+      "response_caps": [
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        1,
+        0.1,
+        0.2
+      ],
+      "direction_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "eta0.05g0.8",
+      "gain": 0.8,
+      "tag": "rotation",
+      "amplitudes": [
+        0.12,
+        0.12,
+        0.12,
+        0.6,
+        0.12,
+        1.8,
+        0.12,
+        0.05
+      ],
+      "response_caps": [
+        0.07,
+        0.07,
+        0.07,
+        0.3,
+        0.07,
+        0.8,
+        0.07,
+        0.1
+      ],
+      "direction_matrix": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "eta0.1g0.4",
+      "gain": 0.4,
+      "tag": "rotation",
+      "amplitudes": [
+        0.12,
+        0.12,
+        0.12,
+        0.6,
+        0.12,
+        1.8,
+        0.12,
+        0.1
+      ],
+      "response_caps": [
+        0.07,
+        0.07,
+        0.07,
+        0.3,
+        0.07,
+        0.8,
+        0.07,
+        0.1
+      ],
+      "direction_matrix": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "damp0.2g0.4",
+      "gain": 0.4,
+      "tag": "rotation",
+      "amplitudes": [
+        0.12,
+        0.12,
+        0.12,
+        0.6,
+        0.12,
+        1.8,
+        0.12,
+        0.7
+      ],
+      "response_caps": [
+        0.07,
+        0.07,
+        0.07,
+        0.3,
+        0.07,
+        0.8,
+        0.07,
+        0.35
+      ],
+      "direction_matrix": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "eta_damping": 0.2
+    },
+    {
+      "id": "eta0.02g0.6",
+      "gain": 0.6,
+      "tag": "rotation",
+      "amplitudes": [
+        0.12,
+        0.12,
+        0.12,
+        0.6,
+        0.12,
+        1.8,
+        0.12,
+        0.02
+      ],
+      "response_caps": [
+        0.07,
+        0.07,
+        0.07,
+        0.3,
+        0.07,
+        0.8,
+        0.07,
+        0.1
+      ],
+      "direction_matrix": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "integration": {
+    "initial": [
+      0.1,
+      0,
+      0
+    ],
+    "burnIn": 600,
+    "window": 90,
+    "dt": 0.0025,
+    "sample": 0.01
+  },
+  "selection": {
+    "requiredCount": 84,
+    "eligibility": "points <= v08 points; all-node simple count <= v08 simple; default-node simple count <= v08 default; both mean world and centered RMS-normalized Hellinger dayun effects at least 1.05 times v08",
+    "objective": "Among eligible candidates maximize sqrt(world_ratio * shape_ratio); ties use fixed catalog order",
+    "fallback": "v08 when none eligible. Invalid baseline input preserved as calibration_input_error.",
+    "runtimeDependence": "Profile depends only on natal pillars and natal eight parameters plus this frozen calibration protocol. Runtime date, dayun, sex, enabled layers and multipliers do not choose profile."
+  },
+  "hashes": {
+    "calibrate.js": "e4acd69c40c60fbedae2fe9e65b5b1852c280c7f80dc419361c386fcdf5fae96",
+    "select_profiles.py": "a50aecf6d0387e12300b56f7a673e17a67a99027a1c4828b1e4cea759db9ab60",
+    "drive.js": "2cce264fbf5b54bd6ec38e7d950a532e13137e14a8a160ef7efaaefe15471a8b",
+    "experiment.js": "5e18c9ae766e9d69d5e334c322e95607fd93b68de15d943bb77e0ee5dc474920",
+    "../qa/morphology_runtime.cjs": "7230e753512471118689e4c6c8c2f9fc1c4be103faf706152fd2fc659b8061cb",
+    "../qa/morphology_v09.py": "8d1228608466bb2fcdde9284eb96fceb16b471067a9ea0d2521024ab92769ec9"
+  },
+  "revision": {
+    "previousLockSHA256": "23905152711dcacb028d4db77ee8c1c6f74cfeb869c9492a295c7273f7d86c4b",
+    "reason": "Independent recurrence implementation corrected reporting of neighboring fractional-lag minima. Selection rule, canonical probes, candidates, and thresholds unchanged. All saved calibration trajectories reclassified with final implementation before selecting any profile.",
+    "runtimeFinalSHA256": "7230e753512471118689e4c6c8c2f9fc1c4be103faf706152fd2fc659b8061cb",
+    "crosscheck": "846 independent arrays: JS and Python classes all agree; nonperiodic auxiliary minimum error may differ by up to 0.00028."
+  }
+}

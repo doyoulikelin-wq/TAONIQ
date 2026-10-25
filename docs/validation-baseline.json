@@ -1,0 +1,83 @@
+{
+  "version": "TAONIQ v0.10 / inherited v0.9 evidence",
+  "scope": "These are existing v0.9 results, not validation of all new arbitrary-input v0.10 charts.",
+  "v09_eight_births": {
+    "new_profiles": 3,
+    "retained_v08_profiles": 5,
+    "new_profile_cases": [
+      "T01",
+      "T02",
+      "T08"
+    ]
+  },
+  "v09_development": {
+    "conditions": 152,
+    "simple_v08": 13,
+    "simple_v09": 9,
+    "near_fixed_v08": 0,
+    "near_fixed_v09": 0,
+    "default_subset": {
+      "conditions": 56,
+      "simple_v08": 3,
+      "simple_v09": 4
+    },
+    "independent": false
+  },
+  "v09_holdout": {
+    "total_conditions": 24,
+    "valid_conditions": 22,
+    "input_domain_failures": 2,
+    "near_periodic_v08": 3,
+    "near_periodic_v09": 4,
+    "near_fixed_v08": 0,
+    "near_fixed_v09": 0
+  },
+  "v09_gallery500": {
+    "rowCount": 500,
+    "birthCases": 8,
+    "perCaseCounts": {
+      "T01": 63,
+      "T02": 63,
+      "T03": 63,
+      "T04": 63,
+      "T05": 62,
+      "T06": 62,
+      "T07": 62,
+      "T08": 62
+    },
+    "distinctParameterSets": 500,
+    "distinctBirthDateCombinations": 500,
+    "morphologyClasses": {
+      "not_flagged_simple": 449,
+      "near_periodic": 51
+    }
+  },
+  "v09_gallery500_pixel_audit": {
+    "htmlCards": 500,
+    "diskPngCount": 500,
+    "uniqueDecodedPixelArrays": 500
+  },
+  "warning": "500 birth/date combinations from 8 births; different pixels/parameters are not proof of 500 visually distinct morphologies; unflagged is not proven chaos.",
+  "source_hashes": {
+    "Langford_v0.9_500图审阅/检查记录.json": {
+      "sha256": "2ef5da70c65af72e3dc143e8db4e322d0e288bbeb79c8a4d51a55795a1e25277",
+      "distribution": "not bundled; local evidence locator, no machine-specific absolute path"
+    },
+    "work/langford_v09_20261025/engine/README.md": {
+      "sha256": "a645f336b582cc8f290502f48ea60d4ff8bc74bf6656b297eaec80e7421d34d3",
+      "distribution": "not bundled; local evidence locator, no machine-specific absolute path"
+    },
+    "work/langford_v09_20261025/qa/holdout_comparison_birth_profiles.json": {
+      "sha256": "c25869f9cd4b05265fad8cb5fd2ee8887309808f691928d31e26cb757782ca6d",
+      "distribution": "not bundled; local evidence locator, no machine-specific absolute path"
+    },
+    "work/langford_v09_20261025/theory/文档审阅与映射依据.md": {
+      "sha256": "a2c62aa38b3e492a21288383852318c964fc24ca9933273e9fec0b255a221037",
+      "distribution": "not bundled; local evidence locator, no machine-specific absolute path"
+    },
+    "Langford_v0.9_8例大运映射优化/复现/取格来源摘录_v03.txt": {
+      "sha256": "7d57222ff4876b54cc2e9c0c1c19bfb839911df4b9855cf1211c5c2eca120a79",
+      "distribution": "not bundled; local evidence locator, no machine-specific absolute path"
+    }
+  }
+}

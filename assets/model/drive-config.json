@@ -1,0 +1,743 @@
+{
+  "version": "v0.9",
+  "weights": [
+    0.7017051434987018,
+    0.21051154304961053,
+    0.06315346291488316,
+    0.01894603887446495,
+    0.005683811662339485
+  ],
+  "gain": 0.15,
+  "amplitudes": [
+    1,
+    0.8,
+    1.2,
+    0.5,
+    0.6,
+    1.4,
+    1.3,
+    1.1
+  ],
+  "parameter_order": [
+    "alpha",
+    "beta",
+    "tau",
+    "delta",
+    "epsilon",
+    "zeta",
+    "kappa",
+    "eta"
+  ],
+  "additive_indices": [
+    5
+  ],
+  "disabled_layers": [],
+  "birth_weights": [
+    0.4,
+    0.3,
+    0.2,
+    0.1
+  ],
+  "hadamard": "Base relation encoder uses standardSylvester8/sqrt8; the frozen natal profile may then apply its declared orthogonal direction_matrix",
+  "positive_transform": "alpha,delta,epsilon,eta=birth*exp(delta_effective_j); delta_effective is profile-specific bounded response, including any declared eta damping",
+  "tau_transform": "birth-axis-branch",
+  "kappa_transform": "negative-axis-gap",
+  "beta_transform": "axis-root-logistic",
+  "axis_beta_cap": 0.8,
+  "zeta_transform": "zeta=birth_zeta+delta_effective_5; candidate caps and direction transform apply before parameter transport",
+  "unit_normalization": "Relation components determine direction; fixed layer budgets determine strength",
+  "layer_order": [
+    "dayun",
+    "year",
+    "month",
+    "day",
+    "hour"
+  ],
+  "raw_weights": [
+    1,
+    0.3,
+    0.09,
+    0.027,
+    0.0081
+  ],
+  "control_policy": "Normalize default budgets once. Effective weights equal fixed budgets times enabled multipliers; never redistribute on disable or before first luck period.",
+  "dayun_policy": "Before first start dayunPillar is null and effective dayun budget is zero. Dayun pillar uses exactly the same natal-relation direction encoding as other layers.",
+  "engineering_hierarchy": "Default input strength hierarchy is chosen for the visual model, not a classical quantitative law or a proof of geometric-response ordering.",
+  "gain_policy": "The natal eight-parameter system and ordered natal pillars select a single frozen profile through identical canonical calibration. The chosen profile stays fixed across runtime dates, gender settings, layer toggles and strength sliders. No geometry-based retries at runtime. Unqualified profiles explicitly retain v0.8.",
+  "mapping_mode": "birth-calibrated-profile",
+  "birth_profiles": {
+    "{\"pillars\":[\"乙巳\",\"甲申\",\"乙卯\",\"戊寅\"],\"params\":[1.562366581594038,0.6012955811652219,1.2502545146777848,2.190747885652388,0.5727542141867343,0.9855329483690145,3.3310145355151684,0.7842807156622666]}": {
+      "case_id": "T01",
+      "id": "shear_R7",
+      "label": "剪切通道重分配",
+      "fallback": false,
+      "eligibleCount": 1,
+      "candidate": {
+        "id": "shear_R7",
+        "gain": 0.8,
+        "tag": "shear",
+        "amplitudes": [
+          0.18,
+          0.18,
+          0.18,
+          0.15,
+          0.18,
+          2.2,
+          0.18,
+          0.35
+        ],
+        "response_caps": [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          1,
+          0.1,
+          0.2
+        ],
+        "direction_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "calibrationStats": {
+        "selected": {
+          "candidate": "shear_R7",
+          "complete": true,
+          "count": 84,
+          "points": 0,
+          "simple": 9,
+          "default_simple": 1,
+          "world": 0.19148398986696366,
+          "shape": 0.24810890982099312,
+          "world_ratio": 1.2472524939594427,
+          "shape_ratio": 1.2522145647623573,
+          "effect_score": 1.24973106661881,
+          "eligible": true
+        },
+        "baseline": {
+          "candidate": "v08",
+          "complete": true,
+          "count": 84,
+          "points": 0,
+          "simple": 9,
+          "default_simple": 1,
+          "world": 0.15352463979373707,
+          "shape": 0.19813609967719767,
+          "world_ratio": 1,
+          "shape_ratio": 1,
+          "effect_score": 1,
+          "eligible": false
+        },
+        "canonicalProbes": 12,
+        "probeNodes": 7,
+        "protocol": "birth-only-canonical-v1.1"
+      }
+    },
+    "{\"pillars\":[\"乙卯\",\"甲申\",\"乙巳\",\"戊寅\"],\"params\":[1.5630872251322605,0.6015169269669128,1.2502545146777848,2.190747885652388,0.5720335706485119,0.984204873558869,3.3310145355151684,0.7842807156622666]}": {
+      "case_id": "T02",
+      "id": "rotation_R0",
+      "label": "角向反馈增强",
+      "fallback": false,
+      "eligibleCount": 3,
+      "candidate": {
+        "id": "rotation_R0",
+        "gain": 0.8,
+        "tag": "rotation",
+        "amplitudes": [
+          0.12,
+          0.12,
+          0.12,
+          0.6,
+          0.12,
+          1.8,
+          0.12,
+          0.7
+        ],
+        "response_caps": [
+          0.07,
+          0.07,
+          0.07,
+          0.3,
+          0.07,
+          0.8,
+          0.07,
+          0.35
+        ],
+        "direction_matrix": [
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      "calibrationStats": {
+        "selected": {
+          "candidate": "rotation_R0",
+          "complete": true,
+          "count": 84,
+          "points": 0,
+          "simple": 6,
+          "default_simple": 0,
+          "world": 0.21289529365442175,
+          "shape": 0.27284273580543655,
+          "world_ratio": 1.399766705303762,
+          "shape_ratio": 1.395357405699025,
+          "effect_score": 1.3975603165862034,
+          "eligible": true
+        },
+        "baseline": {
+          "candidate": "v08",
+          "complete": true,
+          "count": 84,
+          "points": 0,
+          "simple": 7,
+          "default_simple": 1,
+          "world": 0.15209341160048637,
+          "shape": 0.19553609325544227,
+          "world_ratio": 1,
+          "shape_ratio": 1,
+          "effect_score": 1,
+          "eligible": false
+        },
+        "canonicalProbes": 12,
+        "probeNodes": 7,
+        "protocol": "birth-only-canonical-v1.1"
+      }
+    },
+    "{\"pillars\":[\"乙酉\",\"戊子\",\"癸未\",\"丙辰\"],\"params\":[1.2331730252863249,0.2663999543980697,1.249532153349897,3.965990045486406,0.1268369793402745,1.2675158458811873,2.245836590727712,2.8514511286798787]}": {
+      "case_id": "T03",
+      "id": "v08",
+      "label": "保守回退 · v0.8",
+      "fallback": true,
+      "eligibleCount": 0,
+      "candidate": {
+        "id": "v08",
+        "gain": 0.15
+      },
+      "calibrationStats": {
+        "selected": {
+          "candidate": "v08",
+          "complete": true,
+          "count": 84,
+          "points": 0,
+          "simple": 5,
+          "default_simple": 1,
+          "world": 0.19885267658749342,
+          "shape": 0.24715402015368051,
+          "world_ratio": 1,
+          "shape_ratio": 1,
+          "effect_score": 1,
+          "eligible": false
+        },
+        "baseline": {
+          "candidate": "v08",
+          "complete": true,
+          "count": 84,
+          "points": 0,
+          "simple": 5,
+          "default_simple": 1,
+          "world": 0.19885267658749342,
+          "shape": 0.24715402015368051,
+          "world_ratio": 1,
+          "shape_ratio": 1,
+          "effect_score": 1,
+          "eligible": false
+        },
+        "canonicalProbes": 12,
+        "probeNodes": 7,
+        "protocol": "birth-only-canonical-v1.1"
+      }
+    },
+    "{\"pillars\":[\"戊子\",\"丙辰\",\"乙酉\",\"癸未\"],\"params\":[1.3603107823736236,0.5253973893280084,1.1728368103721634,5.971963810598335,0.2957245809757105,1.2238606942700132,2.164788569713415,3.6481370361838352]}": {
+      "case_id": "T04",
+      "id": "v08",
+      "label": "保守回退 · v0.8",
+      "fallback": true,
+      "eligibleCount": 0,
+      "candidate": {
+        "id": "v08",
+        "gain": 0.15
+      },
+      "calibrationStats": {
+        "selected": {
+          "candidate": "v08",
+          "complete": true,
+          "count": 84,
+          "points": 0,
+          "simple": 5,
+          "default_simple": 0,
+          "world": 0.1742701500410333,
+          "shape": 0.2646685616657848,
+          "world_ratio": 1,
+          "shape_ratio": 1,
+          "effect_score": 1,
+          "eligible": false
+        },
+        "baseline": {
+          "candidate": "v08",
+          "complete": true,
+          "count": 84,
+          "points": 0,
+          "simple": 5,
+          "default_simple": 0,
+          "world": 0.1742701500410333,
+          "shape": 0.2646685616657848,
+          "world_ratio": 1,
+          "shape_ratio": 1,
+          "effect_score": 1,
+          "eligible": false
+        },
+        "canonicalProbes": 12,
+        "probeNodes": 7,
+        "protocol": "birth-only-canonical-v1.1"
+      }
+    },
+    "{\"pillars\":[\"丁卯\",\"戊申\",\"丁未\",\"甲辰\"],\"params\":[0.8644228937343983,0.9419844048496113,1.1699398356877013,3.9117014449457934,0.5381123803555683,0.4059110840272232,2.0249446497617716,4.090322140856892]}": {
+      "case_id": "T05",
+      "id": "v08",
+      "label": "保守回退 · v0.8",
+      "fallback": true,
+      "eligibleCount": 0,
+      "candidate": {
+        "id": "v08",
+        "gain": 0.15
+      },
+      "calibrationStats": {
+        "selected": {
+          "candidate": "v08",
+          "complete": true,
+          "count": 84,
+          "points": 1,
+          "simple": 39,
+          "default_simple": 6,
+          "world": 0.1719576984654433,
+          "shape": 0.2627167105398331,
+          "world_ratio": 1,
+          "shape_ratio": 1,
+          "effect_score": 1,
+          "eligible": false
+        },
+        "baseline": {
+          "candidate": "v08",
+          "complete": true,
+          "count": 84,
+          "points": 1,
+          "simple": 39,
+          "default_simple": 6,
+          "world": 0.1719576984654433,
+          "shape": 0.2627167105398331,
+          "world_ratio": 1,
+          "shape_ratio": 1,
+          "effect_score": 1,
+          "eligible": false
+        },
+        "canonicalProbes": 12,
+        "probeNodes": 7,
+        "protocol": "birth-only-canonical-v1.1"
+      }
+    },
+    "{\"pillars\":[\"戊辰\",\"乙卯\",\"丙戌\",\"丁酉\"],\"params\":[0.7419198992883816,0.46873002729078334,0.5327532182498218,4.3662675293341255,0.05080786076788145,0.33967901907730247,1.3044748723850712,2.10662365092148]}": {
+      "case_id": "T06",
+      "id": "v08",
+      "label": "保守回退 · v0.8",
+      "fallback": true,
+      "eligibleCount": 0,
+      "candidate": {
+        "id": "v08",
+        "gain": 0.15
+      },
+      "calibrationStats": {
+        "selected": {
+          "candidate": "v08",
+          "complete": true,
+          "count": 84,
+          "points": 0,
+          "simple": 11,
+          "default_simple": 3,
+          "world": 0.15357733069540638,
+          "shape": 0.2263796760084681,
+          "world_ratio": 1,
+          "shape_ratio": 1,
+          "effect_score": 1,
+          "eligible": false
+        },
+        "baseline": {
+          "candidate": "v08",
+          "complete": true,
+          "count": 84,
+          "points": 0,
+          "simple": 11,
+          "default_simple": 3,
+          "world": 0.15357733069540638,
+          "shape": 0.2263796760084681,
+          "world_ratio": 1,
+          "shape_ratio": 1,
+          "effect_score": 1,
+          "eligible": false
+        },
+        "canonicalProbes": 12,
+        "probeNodes": 7,
+        "protocol": "birth-only-canonical-v1.1"
+      }
+    },
+    "{\"pillars\":[\"乙丑\",\"丁亥\",\"辛酉\",\"庚寅\"],\"params\":[0.7221962029101535,0.4649541809568629,0.516729109399829,6.064728268850831,0.19090009419961879,-0.49188455964074407,1.6680019824516485,3.430155606029307]}": {
+      "case_id": "T07",
+      "id": "v08",
+      "label": "保守回退 · v0.8",
+      "fallback": true,
+      "eligibleCount": 0,
+      "candidate": {
+        "id": "v08",
+        "gain": 0.15
+      },
+      "calibrationStats": {
+        "selected": {
+          "candidate": "v08",
+          "complete": true,
+          "count": 84,
+          "points": 0,
+          "simple": 5,
+          "default_simple": 0,
+          "world": 0.10434737309015889,
+          "shape": 0.17572568116907392,
+          "world_ratio": 1,
+          "shape_ratio": 1,
+          "effect_score": 1,
+          "eligible": false
+        },
+        "baseline": {
+          "candidate": "v08",
+          "complete": true,
+          "count": 84,
+          "points": 0,
+          "simple": 5,
+          "default_simple": 0,
+          "world": 0.10434737309015889,
+          "shape": 0.17572568116907392,
+          "world_ratio": 1,
+          "shape_ratio": 1,
+          "effect_score": 1,
+          "eligible": false
+        },
+        "canonicalProbes": 12,
+        "probeNodes": 7,
+        "protocol": "birth-only-canonical-v1.1"
+      }
+    },
+    "{\"pillars\":[\"丙寅\",\"乙未\",\"癸酉\",\"辛酉\"],\"params\":[0.9309373866631169,0.6335544014603867,0.8591236146191692,5.006300556369528,0.47968143725959755,-0.8231086298019726,1.0961299809023897,3.4322802180319254]}": {
+      "case_id": "T08",
+      "id": "r0.2",
+      "label": "有界角向重分配",
+      "fallback": false,
+      "eligibleCount": 1,
+      "candidate": {
+        "id": "r0.2",
+        "gain": 0.2,
+        "tag": "rotation",
+        "amplitudes": [
+          0.12,
+          0.12,
+          0.12,
+          0.6,
+          0.12,
+          1.8,
+          0.12,
+          0.7
+        ],
+        "response_caps": [
+          0.07,
+          0.07,
+          0.07,
+          0.3,
+          0.07,
+          0.8,
+          0.07,
+          0.35
+        ],
+        "direction_matrix": [
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      "calibrationStats": {
+        "selected": {
+          "candidate": "r0.2",
+          "complete": true,
+          "count": 84,
+          "points": 0,
+          "simple": 4,
+          "default_simple": 1,
+          "world": 0.16683105361777414,
+          "shape": 0.2423760968802551,
+          "world_ratio": 1.109037174456229,
+          "shape_ratio": 1.1492215668544943,
+          "effect_score": 1.1289505920670173,
+          "eligible": true
+        },
+        "baseline": {
+          "candidate": "v08",
+          "complete": true,
+          "count": 84,
+          "points": 0,
+          "simple": 8,
+          "default_simple": 1,
+          "world": 0.15042872994728326,
+          "shape": 0.21090458434717396,
+          "world_ratio": 1,
+          "shape_ratio": 1,
+          "effect_score": 1,
+          "eligible": false
+        },
+        "canonicalProbes": 12,
+        "probeNodes": 7,
+        "protocol": "birth-only-canonical-v1.1"
+      }
+    }
+  },
+  "profile_override_fields": [
+    "gain",
+    "amplitudes",
+    "direction_matrix",
+    "response_caps",
+    "eta_damping"
+  ],
+  "delta_effective_policy": "Profile candidate fields override the base v0.8 defaults. A candidate without response_caps uses its declared linear gain*amplitude*D; a bounded candidate applies tanh caps. Existing beta/tau/kappa structural transforms consume the resulting delta_effective.",
+  "calibration_protocol_sha256": "48d65ccfb98a9f1c5bcd2ba52572db99318d2ffb96d3db9ef7d924265bbe15e6",
+  "channel_transform": "D = sum fixed_budget * enabled_multiplier * R * unit_relation_vector. A bounded candidate uses c_j = cap_j*tanh(gain*amplitude_j*D_j/cap_j). The optional eta damping is a fixed bounded function of total D norm. Existing positive/negative axis guard transforms then apply.",
+  "profile_policy": "Candidate selection uses all seven fixed canonical nodes and same point/short-period classifier; a candidate must be no worse in point/all-node-simple/default-node-simple counts and improve both mean world and centered RMS-normalized dayun Hellinger distances by at least 5%. Eligible maximum geometric mean ratio wins; fixed order ties. Otherwise v0.8 fallback.",
+  "limits": "Finite canonical calibration does not prove complex shapes for arbitrary dates/inputs or all control values. Same ODE, initial state, burn, and world projection. Input budget ordering is not a guarantee of geometric effect ordering."
+}
